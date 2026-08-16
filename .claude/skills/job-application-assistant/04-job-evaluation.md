@@ -46,6 +46,20 @@ Judge the level comparison the same way you judge everything else in this framew
 
 **Worked example:** a candidate whose Languages table lists Spanish (Native) and English (B1/B2). A posting requiring "fluent Russian" → **FAIL**, Russian isn't declared at all. A posting requiring "fluent English" → **FLAG**, English is declared but "fluent" plausibly exceeds B1/B2 — score and draft the application, but tell the candidate this posting's bar may be a stretch and let them decide. A posting requiring "conversational English" or unspecified English → **PASS**, B1/B2 clears a "conversational" bar cleanly.
 
+## Protected Categories Gate — run before scoring
+
+Since the candidate requires a role designated for "Categorie Protette" (Italian Law 68/99), any job posting that is evaluated must explicitly refer to this in the description. This is a hard gate.
+
+Read the posting description for references to protected categories, Legge 68/99, or related terminology:
+
+| Posting wording | Verdict |
+|---|---|
+| Stated reference to protected categories ("categorie protette", "legge 68/99", "L. 68/99", "collocamento mirato", "art. 1", "art. 18") | **PASS** — Proceed to scoring. |
+| Stated reference that is negative or ambiguous | **FLAG, then proceed** — Ask the user if it applies to them. |
+| **No mention** of protected categories, Legge 68/99, or collocamento mirato in the job description | **FAIL — hard stop.** Do not score, do not draft. Report this failure to the user. |
+
+A role that fails this gate is not scored and not drafted. Everything below applies only to roles that pass it.
+
 ## Scoring Dimensions
 
 Evaluate each job posting against these five dimensions:
@@ -60,9 +74,9 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** [YOUR_PRIMARY_SKILLS]
-**Moderate match areas:** [YOUR_SECONDARY_SKILLS]
-**Weak match areas:** [SKILLS_YOU_LACK]
+**Strong match areas:** C#, .NET Framework & .NET Core, SQL Server database design/optimization, REST APIs, RabbitMQ, Kafka, CI/CD pipelines, Dependency Injection, OOP design patterns, Clean Architecture.
+**Moderate match areas:** PostgreSQL, Redis, Node.js, JavaScript, jQuery, XML/XSLT, SOAP.
+**Weak match areas:** Deep React/Angular/Vue frontend engineering, mobile app development (iOS/Android), complex cloud infrastructure (e.g. AWS/Azure architectures if required beyond standard CI/CD deployment).
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for?
@@ -74,9 +88,9 @@ Does work history align with what they're looking for?
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** [YOUR_DIRECT_EXPERIENCE_DOMAINS]
-**Moderate:** [YOUR_ADJACENT_EXPERIENCE]
-**Entry-level:** [ROLES_WITH_LIMITED_EXPERIENCE]
+**Strong:** Backend software development (20+ years), systems integration (REST, RabbitMQ, Kafka, SOAP), regulated systems (gaming/ADM/AAMS), database performance tuning.
+**Moderate:** AI backend engineering (MCP servers, Microsoft.Extensions.AI integration, LLMs), CI/CD scripting (Azure DevOps, NugetHelper).
+**Entry-level:** Frontend SPA development, Kubernetes/DevOps engineering (beyond pipeline integrations).
 
 ### 3. Behavioral/Culture Fit (0-100)
 Does the role and company culture match the behavioral profile?
@@ -107,19 +121,19 @@ Does this role advance career goals and contain tasks that energize?
 | 0-39 | Dead end or backwards step |
 
 **Career goals:**
-- [YOUR_CAREER_GOAL_1]
-- [YOUR_CAREER_GOAL_2]
-- [YOUR_CAREER_GOAL_3]
+- Target a Senior or Principal Backend Developer role focusing on .NET ecosystem.
+- Expand expertise in AI backend engineering (Model Context Protocol, LLM integrations, Semantic Kernel).
+- Act as a technical leader or lead architect for systems integration and backend design.
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: [YOUR_ENERGIZING_TASKS]
-- Tasks that drain: [YOUR_DRAINING_TASKS]
-- Non-task factors: leadership style, department culture, company values, degree of autonomy
+- Tasks that energize: Complex API design, performance tuning, resolving database bottlenecks, creating developer tooling/scripts, implementing AI integrations/MCP servers.
+- Tasks that drain: Heavy frontend styling, manual repetitive QA testing, configuring complex cloud infrastructure without local setup.
+- Non-task factors: Autonomy, remote work, high engineering standards, clear requirements.
 
 **Life situation alignment:** Consider personal constraints:
-- **Security**: [YOUR_FINANCIAL_SITUATION_CONTEXT]
-- **Flexibility**: [YOUR_SCHEDULE_CONSTRAINTS]
-- **Professional development**: [YOUR_GROWTH_PRIORITIES]
+- **Security**: Registered in the Collocamento Mirato (Categorie Protette Legge 68/99) since 28/07/2026.
+- **Flexibility**: Demands Full Remote / home-office arrangements.
+- **Professional development**: Wants to stay in a technical track rather than moving into pure management.
 
 ### 6. Salary Benchmark (Optional)
 

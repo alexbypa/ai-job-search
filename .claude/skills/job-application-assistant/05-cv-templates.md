@@ -130,11 +130,11 @@ When the role sits outside your home domain, **lead with the domain-transfer arg
 **Create 2-3 profile statement templates for your main role types:**
 
 <!-- SETUP: These are populated based on your background -->
-**For [YOUR_PRIMARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_1]
+**For Senior .NET Backend Developer roles:**
+> Senior Software Developer with over 20 years of experience in backend services, distributed systems, and database optimization. Combines deep expertise in C#, .NET, and SQL Server with async messaging architectures (RabbitMQ, Kafka) to build highly reliable, low-latency enterprise solutions.
 
-**For [YOUR_SECONDARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_2]
+**For AI Backend Engineer roles:**
+> Senior .NET Developer specializing in integration architectures and AI engineering. Experienced in building telemetry systems, Model Context Protocol (MCP) servers, and LLM integrations (Microsoft.Extensions.AI, Semantic Kernel) with deterministic guardrails.
 
 Statements labeled *[Used for: <company>_<role>]* were extracted from archived application drafts by `/setup` Path A. They are **phrasing references, never fact sources**: when drafting from one, every factual claim still comes from `01-candidate-profile.md` - a past tailored draft does not vouch for its own accuracy.
 

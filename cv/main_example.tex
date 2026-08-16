@@ -1,8 +1,7 @@
-%% Example CV - [YOUR_NAME]
+%% Example CV - Alessandro Chiodo
 %% Comprehensive overview of all competencies, experience, and achievements.
 %% Use as a master reference when tailoring role-specific CVs.
 %%
-%% SETUP: Run /setup to populate this with your actual information.
 %% Compile with: lualatex main_example.tex
 %% (pdflatex often fails on modern MiKTeX with fontawesome5 font-expansion errors.)
 
@@ -33,7 +32,7 @@
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
+    pdftitle={Alessandro Chiodo - CV},
     % Keep pdfpagemode=UseNone: this block runs after moderncv's own
     % \AtEndPreamble (moderncv.cls sets pdfpagemode there), so a FullScreen
     % value here would win and open every CV in fullscreen presentation mode.
@@ -43,13 +42,10 @@
 \usepackage{import}
 
 % personal data
-\name{[First]}{[Last]}
-% If you have no address to list, DELETE this whole line. \address{}{}{} fails
-% with "There's no line here to end" on every moderncv version.
-\address{[Your Address, City, Country]}{}{}
-\phone[mobile]{[+XX XXXXXXXXXX]}
-\email{[your.email@example.com]}
-\extrainfo{\href{[https://linkedin.com/in/your-profile]}{LinkedIn}, \href{[https://github.com/your-username]}{GitHub}}
+\name{Alessandro}{Chiodo}
+\address{Palermo, Italia (Disponibile Full Remote)}{}{}
+\phone[mobile]{+39 351 7727138}
+\email{alexbypa@gmail.com}
 
 \begin{document}
 
@@ -60,25 +56,27 @@
 % ============================================================
 
 \vspace{6pt}
-\small{[Write a 3-5 line profile statement tailored to the role you're applying for. Focus on what makes you uniquely qualified. Example: "Data scientist with a PhD in [field] and X years of industry experience. Combines deep domain expertise in [domain] with strong applied machine learning and Python development skills. Experienced in developing end-to-end ML pipelines, from data ingestion to stakeholder-facing dashboards."]}
+\small{Senior Software Developer con oltre 20 anni di esperienza nello sviluppo di servizi backend, applicazioni web e integrazioni enterprise. Competenze consolidate in C\#, .NET, SQL Server, REST API e messaggistica asincrona, maturate in sistemi ad alta affidabilità e contesti regolamentati. Orientato a performance, manutenibilità, architetture a basso accoppiamento e qualità del software; esperienza recente nell’applicazione di AI, LLM e Model Context Protocol a sistemi .NET. Appartenente alle Categorie Protette ai sensi della Legge 68/99, Iscritto al Collocamento Mirato dal 28/07/2026.}
 
 % ============================================================
 %     CORE COMPETENCIES
 % ============================================================
 
-\section{Core Competencies}
+\section{Competenze Tecniche}
 \vspace{1pt}
 \begin{itemize}
 
-\item \textbf{[Skill Category 1]}: [Specific skills, frameworks, tools. Be concrete.]
+\item \textbf{Backend e API}: C\#, .NET, ASP.NET, REST API, LINQ, Dependency Injection, Design Patterns, Clean Architecture.
 
-\item \textbf{[Skill Category 2]}: [Specific skills, frameworks, tools.]
+\item \textbf{Database e Performance}: SQL Server, PostgreSQL, Redis; Stored Procedure, trigger, CTE, tuning query e gestione memoria.
 
-\item \textbf{[Skill Category 3]}: [Specific skills, frameworks, tools.]
+\item \textbf{Integrazioni e Asincronia}: RabbitMQ, Kafka, HTTP, SOAP/XML, System.Threading.Channels, Worker Services.
 
-\item \textbf{[Skill Category 4]}: [Domain expertise, methods, approaches.]
+\item \textbf{Testing e Delivery}: xUnit, Moq, Postman, Newman, Git; utilizzo operativo di Azure DevOps e CI/CD.
 
-\item \textbf{[Skill Category 5]}: [Tools, platforms, software.]
+\item \textbf{Osservabilità}: Logging strutturato, Elasticsearch, OpenTelemetry, Serilog, Microsoft.Extensions.Logging.
+
+\item \textbf{AI Engineering}: MCP (Model Context Protocol), Microsoft.Extensions.AI, Semantic Kernel, Ollama, RAG, SQL guardrails per agenti AI.
 
 \end{itemize}
 
@@ -86,37 +84,68 @@
 %     PROFESSIONAL EXPERIENCE
 % ============================================================
 
-\section{Professional Experience}
+\section{Esperienza Professionale}
 \vspace{3pt}
 \begin{itemize}
 
-% --- Most Recent Role ---
-\item{\cventry{[YYYY-Present]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+% --- Pixelo ---
+\item{\cventry{10/2017--11/2025}{Sviluppatore capo progetto}{Pixelo S.r.l.}{Palermo, Italia}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1 - be specific, use numbers where possible]
-    \item [Achievement or responsibility 2]
-    \item [Achievement or responsibility 3]
-    \item [Achievement or responsibility 4]
+    \item Progettazione di REST Web Services in C\# con Dependency Injection e Design Patterns in contesto regolamentato ADM/AAMS; centralizzazione della logica in un hub core condiviso, riducendo di circa 25 volte i tempi di sviluppo dei nuovi servizi.
+    \item Gestione e ottimizzazione di SQL Server (Stored Procedure, trigger e CTE) per circa 300 transazioni concorrenti, con tempo medio di elaborazione di 7-8 ms.
+    \item Implementazione di integrazioni asincrone RabbitMQ e Kafka con pattern proxy/factory configurabile, per elaborare messaggi di fornitori con modelli dati eterogenei.
+    \item Sviluppo dell'estensione Azure DevOps NugetHelper in Node.js e integrazione nelle pipeline CI/CD per automatizzare build, distribuzione di artefatti e deployment simultaneo di circa 25 servizi.
+    \item Realizzazione di un pacchetto interno di logging con Elasticsearch e OpenTelemetry, distribuito tramite Azure DevOps Artifacts.
 \end{itemize}}}
 
 \vspace{3pt}
 
-% --- Previous Role ---
-\item{\cventry{[YYYY-YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+% --- TeycoWeb ---
+\item{\cventry{10/2014--10/2017}{Sviluppatore Web}{TeycoWeb S.r.l.}{Palermo, Italia}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1]
-    \item [Achievement or responsibility 2]
-    \item [Achievement or responsibility 3]
+    \item Sviluppo e manutenzione evolutiva di back-office e servizi web con ASP.NET, C\#, SQL Server, XSLT e jQuery, a supporto dell’operatività di un provider di scommesse autorizzato.
+    \item Realizzazione di componenti e infrastrutture applicative per Lotto Online, 10eLotto e Bet Exchange, integrando servizi e flussi informativi con partner esterni.
+    \item Contributo alla continuità operativa di sistemi business-critical attraverso manutenzione, analisi dei problemi e ottimizzazione database.
 \end{itemize}}}
 
 \vspace{3pt}
 
-% --- Earlier Role ---
-\item{\cventry{[YYYY-YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+% --- Leonardo ---
+\item{\cventry{04/2007--09/2014}{Sviluppatore Web}{Leonardo Service Provider S.p.A.}{Palermo, Italia}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1]
-    \item [Achievement or responsibility 2]
+    \item Progettazione di servizi interoperabili Java/.NET e database SQL Server; il servizio Gratta \& Vinci online ha superato il collaudo con throughput di 19 transazioni al secondo.
+    \item Sviluppo di back-office e infrastrutture di servizio con ASP.NET, C\#, SQL Server e XML/XSLT; realizzazione di integrazioni per il protocollo ippico PSR TRIS - BIG MATCH.
 \end{itemize}}}
+
+\vspace{3pt}
+
+% --- Older ---
+\item{\cventry{2001--2007}{Sviluppatore software / System Engineer}{Esperienze precedenti selezionate}{Palermo, Italia}{}{\vspace{1pt}
+\begin{itemize}
+    \item Sviluppo di applicazioni ASP.NET, VB.NET/VB6 e SQL Server/MSDE per servizi pubblici, aziende e sistemi gestionali distribuiti.
+    \item Realizzazione di un’applicazione client/server SOAP/XML per l’aggiornamento dati di circa 200 BetShop tra Serbia, Bosnia e Montenegro.
+    \item Gestione di infrastrutture Windows Server, Active Directory, DHCP/DNS e misure di sicurezza.
+\end{itemize}}}
+
+\end{itemize}
+
+% ============================================================
+%     PROJECTS
+% ============================================================
+
+\section{Progetti Tecnici Selezionati}
+\vspace{1pt}
+\begin{itemize}
+
+\item \textbf{CSharp.Essentials / LoggerHelper}: Progettazione di un'architettura modulare a plugin con registrazione ModuleInitializer, ottimizzazione del middleware HTTP con ArrayPool<char> e routing O(1) precomputato, e politiche di resilienza HTTP.
+
+\item \textbf{FlowScheduler}: Client LLM resiliente con fallback/cooldown thread-safe e guardrail SQL read-only deterministici per bloccare DDL/DML generati da agenti AI.
+
+\item \textbf{Server MCP .NET}: Esposizione di telemetria e diagnostica ad agenti AI tramite Model Context Protocol con Dependency Inversion.
+
+\item \textbf{Pipeline real-time BetFair}: Ingestione dati streaming con System.Threading.Channels bounded e backpressure, e gestione scoped in worker a lungo ciclo tramite IServiceScopeFactory.
+
+\item \textbf{Competenze AI e MCP}: Sviluppo di telemetria basata su Model Context Protocol e guardrail deterministici.
 
 \end{itemize}
 
@@ -124,60 +153,33 @@
 %     EDUCATION
 % ============================================================
 
-\section{Education}
+\section{Formazione}
 \vspace{1pt}
 \begin{itemize}
 
-\item{\cventry{[YYYY-YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-Thesis: ``[Thesis Title].'' [Brief description of research focus.]
-}}
-
-\vspace{3pt}
-
-\item{\cventry{[YYYY-YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-[Brief description or key topics.]
-}}
+\item{\cventry{1991--1998}{Laurea (Vecchio Ordinamento) in Matematica}{Università degli Studi di Palermo}{Palermo, Italia}{}{Conseguita il 18 marzo 1998 con votazione 100/110. Tesi: ``Metodi numerici e applicazioni matematiche.''}}
 
 \end{itemize}
 
 % ============================================================
-%     LANGUAGES
+%     LANGUAGES & CERTIFICATIONS
 % ============================================================
 
-\section{Languages}
+\section{Lingue e Certificazioni}
 \vspace{1pt}
 \begin{itemize}
-\item [Language 1] (native), [Language 2] (fluent), [Language 3] (intermediate).
-\end{itemize}
-
-% ============================================================
-%     PUBLICATIONS (optional)
-% ============================================================
-
-\section{Publications}
-\vspace{1pt}
-\begin{itemize}
-\item [Author(s)] ([Year]). [Title]. [Journal/Conference]. \href{[DOI_URL]}{DOI link}
-\end{itemize}
-
-% ============================================================
-%     HONORS AND AWARDS (optional)
-% ============================================================
-
-\section{Honors and Awards}
-\vspace{1pt}
-\begin{itemize}
-\item{\textbf{[Award Name]} -- [Event/Organization] ([Year]).}
+\item \textbf{Lingue}: Italiano (madrelingua), Inglese (livello B2), Spagnolo (livello A2).
+\item \textbf{Certificazioni}: Certificazioni Microsoft (Windows 2000 Professional e Server, Network Infrastructure, Directory Services e Security).
 \end{itemize}
 
 % ============================================================
 %     REFERENCES
 % ============================================================
 
-\section{References}
+\section{Referenze}
 \vspace{1pt}
 \begin{itemize}
-\item{Available upon request.}
+\item Disponibili su richiesta.
 \end{itemize}
 
 \end{document}

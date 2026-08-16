@@ -13,79 +13,68 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 ## Candidate Profile
 
-<!-- This section is auto-populated by /setup. You can also fill it in manually. -->
-
 ### Identity
-- **Name:** [YOUR_NAME]
-- **Location:** [YOUR_CITY], [YOUR_COUNTRY] ([YOUR_COMMUTE_CONSTRAINTS])
+- **Name:** Alessandro Chiodo
+- **Location:** Palermo, Italy (Full Remote)
 - **Languages:**
   | Language | Level |
   |----------|-------|
-  | [LANGUAGE] | [LEVEL] |
-  <!-- Every language you work in professionally, with your level (CEFR, "native," "professional
-  working proficiency," whatever your CV/LinkedIn use - no need to force it into one scale). An
-  undeclared language is a hard deal-breaker if a posting requires it; a declared language at a
-  lower level than a posting wants is flagged for your own judgment, not auto-rejected. See
-  04-job-evaluation.md's Language Gate. -->
-- **CV language:** [YOUR_CV_LANGUAGE] <!-- English unless your market expects otherwise; /setup asks -->
+  | Italiano | Native |
+  | Inglese  | B2 |
+  | Spagnolo | A2 |
+- **CV language:** Italian / English
 
-- **Status:** [YOUR_EMPLOYMENT_STATUS]
-- **LinkedIn headline:** "[YOUR_LINKEDIN_HEADLINE]"
+- **Status:** Iscritto al Collocamento Mirato (Categorie Protette Legge 68/99) dal 28/07/2026.
+- **LinkedIn headline:** "Senior Backend .NET Developer | Sistemi distribuiti, integrazioni e performance"
 
 ### Education
-<!-- List your degrees, most recent first -->
-- **[DEGREE_LEVEL] in [FIELD]** ([YEAR_START]-[YEAR_END]) - [INSTITUTION]
-  - Thesis: "[THESIS_TITLE]"
-  - Topics: [KEY_TOPICS]
+- **Laurea (Vecchio Ordinamento) in Matematica** (1991-1998) - Università degli Studi di Palermo
+  - Thesis: "Metodi numerici e applicazioni matematiche"
+  - Topics: Calcolo scientifico, analisi numerica, logica, algebra.
 
 ### Professional Experience
-<!-- List your roles, most recent first -->
-- **[JOB_TITLE]** ([START_DATE] - [END_DATE]) - **[COMPANY]** ([LOCATION])
-  - [KEY_RESPONSIBILITY_1]
-  - [KEY_RESPONSIBILITY_2]
-  - [KEY_ACHIEVEMENT]
+- **Sviluppatore capo progetto** (Ottobre 2017 - Novembre 2025) - **Pixelo S.r.l.** (Palermo, Italy)
+  - Progettazione di REST Web Services in C# con Dependency Injection e Design Patterns in contesto regolamentato ADM/AAMS.
+  - Sviluppo di un hub core condiviso riducendo di 25 volte i tempi di sviluppo dei nuovi servizi.
+  - Gestione ed ottimizzazione di SQL Server per ~300 transazioni concorrenti con tempo medio di elaborazione di 7-8 ms.
+  - Implementazione di integrazioni asincrone con RabbitMQ e Kafka (pattern proxy/factory configurabile).
+  - Sviluppo dell'estensione Azure DevOps NugetHelper in Node.js per automazione di build e deployment di ~25 servizi.
+- **Sviluppatore Web** (Ottobre 2014 - Ottobre 2017) - **TeycoWeb S.r.l.** (Palermo, Italy)
+  - Sviluppo e manutenzione evolutiva di back-office e servizi web con ASP.NET, C#, SQL Server, XSLT e jQuery.
+  - Realizzazione infrastrutture Lotto Online, 10eLotto e Bet Exchange con partner esterni.
+- **Sviluppatore Web** (Aprile 2007 - Settembre 2014) - **Leonardo Service Provider S.p.A.** (Palermo, Italy)
+  - Progettazione servizi interoperabili Java/.NET e SQL Server. Collaudo Gratta & Vinci online a 19 transazioni/sec.
+- **Sviluppatore software / System Engineer** (2001 - 2007) - **Esperienze precedenti selezionate**
+  - Sviluppo applicazioni ASP.NET, VB.NET/VB6 e SQL Server/MSDE. Client/server SOAP/XML per BetShop.
 
 ### Technical Skills
-- **Primary:** [YOUR_PRIMARY_SKILLS]
-- **Secondary:** [YOUR_SECONDARY_SKILLS]
-- **Domain:** [YOUR_DOMAIN_EXPERTISE]
-- **Software:** [YOUR_TOOLS_AND_SOFTWARE]
+- **Primary:** C#, .NET Core/.NET 8, ASP.NET Core, REST API, SQL Server, RabbitMQ, Kafka, Dependency Injection, Design Patterns, Clean Architecture, Testing (xUnit, Moq, Postman, Newman)
+- **Secondary:** PostgreSQL, Redis, Node.js, JavaScript, jQuery, Java, XML/XSLT, SOAP/XML
+- **Domain:** Sistemi ad alta affidabilità e concorrenza, gaming e scommesse online, logging e telemetria (Elasticsearch, OpenTelemetry, Serilog)
+- **Software:** Git, Azure DevOps, VS Code, Visual Studio, SSMS, Ollama
+- **AI Engineering:** Model Context Protocol (MCP), Microsoft.Extensions.AI, Semantic Kernel, RAG, SQL guardrails per agenti AI
 
 ### Certifications
-<!-- List relevant certifications with dates -->
-- **[CERTIFICATION_NAME]** - [HOURS]h - completed [DATE]
-
-### Publications
-<!-- List peer-reviewed publications, if any -->
-- [AUTHOR_LIST] ([YEAR]). [TITLE]. [JOURNAL].
-
-### Awards
-<!-- List relevant awards, hackathons, competitions -->
-- [AWARD_NAME] - [EVENT] ([YEAR])
+- **Certificazioni Microsoft** - Windows 2000 Professional e Server, Network Infrastructure, Directory Services e Security
 
 ### Behavioral Profile
-<!-- Your behavioral assessment results (PI, DISC, Myers-Briggs, or self-assessment) -->
-- **[TRAIT_1]** - [DESCRIPTION]
-- **[TRAIT_2]** - [DESCRIPTION]
-- **Strengths:** [YOUR_STRENGTHS]
-- **Growth areas:** [YOUR_GROWTH_AREAS]
-- **Thrives in:** [YOUR_IDEAL_ENVIRONMENT]
+- **Clean Code & Performance Advocate:** Focus su manutenibilità, basso accoppiamento e alta efficienza.
+- **Analytical Mindset:** Approccio analitico e matematico alla risoluzione di problemi complessi.
+- **Strengths:** Ottimizzazione delle performance, design di servizi backend distribuiti, integrazioni e messaggistica asincrona.
+- **Growth areas:** UI/UX design (predilige focus sul backend e sistemi interni).
+- **Thrives in:** Ambienti di sviluppo collaborativi, organizzati, orientati alla qualità tecnica e in modalità full remote.
 
 ### What Excites You
-<!-- What motivates you professionally -->
-- [PASSION_1]
-- [PASSION_2]
+- Ottimizzazione di performance e allocazioni di memoria (es. ArrayPool, routing precomputato).
+- Integrazione di intelligenza artificiale (LLM locali/cloud, MCP server, guardrail deterministici).
 
 ### Target Sectors
-<!-- Industries and companies you're targeting -->
-- [SECTOR_1]: [EXAMPLE_COMPANIES]
-- [SECTOR_2]: [EXAMPLE_COMPANIES]
+- **Sviluppo backend .NET:** Servizi backend complessi, piattaforme ad alte transazioni.
+- **AI Engineering / System Integration:** Sviluppo di agenti AI, strumenti di telemetria basati su MCP, middleware di integrazione.
 
 ### Deal-breakers
-<!-- Hard constraints on job search. Language requirements are handled separately and
-automatically from your Languages table above - don't duplicate them here. -->
-- [DEALBREAKER_1]
-- [DEALBREAKER_2]
+- Lavoro in presenza obbligatorio o con frequenti trasferte (necessità di Full Remote).
+- Ambienti con scarso orientamento alla qualità del codice, mancanza di test e procedure di CI/CD.
 
 ## Repo Structure
 - `cv/` - LaTeX CV variants (moderncv template, banking style)

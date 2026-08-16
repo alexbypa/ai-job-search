@@ -8,66 +8,79 @@ framework_version: 1.1.1
 <!-- After running /setup, all sections will be filled with your actual information -->
 
 ## Identity
-- **Name:** [YOUR_NAME]
-- **Location:** [YOUR_ADDRESS]
-- **Phone:** [YOUR_PHONE]
-- **Email:** [YOUR_EMAIL]
-- **LinkedIn:** [YOUR_LINKEDIN_URL]
-- **GitHub:** [YOUR_GITHUB_URL]
-- **Status:** [YOUR_EMPLOYMENT_STATUS]
-- **Constraints:** [YOUR_COMMUTE_OR_LOCATION_CONSTRAINTS]
+- **Name:** Alessandro Chiodo
+- **Location:** Palermo, Italy
+- **Phone:** +39 351 7727138
+- **Email:** alexbypa@gmail.com
+- **LinkedIn:** [Not provided - available on request]
+- **GitHub:** [Not provided - available on request]
+- **Status:** Iscritto al Collocamento Mirato (Categorie Protette Legge 68/99) dal 28/07/2026.
+- **Constraints:** Disponibile Full Remote
 
 ### Languages
-<!-- Every language you can work in professionally, with your honest level. Used by the
-Language Gate in 04-job-evaluation.md and by job-scraper/search-queries.md's query-language
-generation. Omit any language you don't actually work in - an undeclared language is treated as
-a hard no, not a gap to smooth over. -->
 
 | Language | Level | Notes |
 |----------|-------|-------|
-| [LANGUAGE] | [LEVEL, e.g. "Native" / "C2" / "B1/B2 (conversational)"] | [optional] |
+| Italiano | Native | Mother tongue |
+| Inglese  | B2 | Stated level |
+| Spagnolo | A2 | Stated level |
 
 ## Education
 
 | Degree | Period | Institution | Key Topics |
 |--------|--------|-------------|------------|
-| [DEGREE] | [YEARS] | [INSTITUTION] | [TOPICS] |
+| Laurea (Vecchio Ordinamento) in Matematica | 1991 - 1998 | Università degli Studi di Palermo | Calcolo scientifico, analisi numerica, logica, algebra |
 
 ## Professional Experience
 
-### [JOB_TITLE] - [COMPANY] ([START] - [END])
-[LOCATION]
-- [RESPONSIBILITY_OR_ACHIEVEMENT_1]
-- [RESPONSIBILITY_OR_ACHIEVEMENT_2]
-- [RESPONSIBILITY_OR_ACHIEVEMENT_3]
+### Sviluppatore capo progetto - Pixelo S.r.l. (Ottobre 2017 - Novembre 2025)
+Palermo, Italy
+- Progettazione di REST Web Services in C# con Dependency Injection e Design Patterns in contesto regolamentato ADM/AAMS.
+- Centralizzazione della logica in un hub core condiviso, riducendo di circa 25 volte i tempi di sviluppo dei nuovi servizi.
+- Gestione e ottimizzazione di SQL Server (Stored Procedure, trigger e CTE) per circa 300 transazioni concorrenti, con tempo medio di elaborazione di 7–8 ms.
+- Implementazione di integrazioni asincrone RabbitMQ e Kafka con pattern proxy/factory configurabile.
+- Sviluppo dell’estensione Azure DevOps NugetHelper in Node.js e integrazione nelle pipeline CI/CD per automatizzare build e deployment di circa 25 servizi.
+- Realizzazione di un pacchetto interno di logging con Elasticsearch e OpenTelemetry, distribuito tramite Azure DevOps Artifacts.
 
-<!-- Add more roles as needed -->
+### Sviluppatore Web - TeycoWeb S.r.l. (Ottobre 2014 - Ottobre 2017)
+Palermo, Italy
+- Sviluppo e manutenzione evolutiva di back-office e servizi web con ASP.NET, C#, SQL Server, XSLT e jQuery.
+- Realizzazione di componenti e infrastrutture applicative per Lotto Online, 10eLotto e Bet Exchange.
+- Contributo alla continuità operativa di sistemi business-critical.
+
+### Sviluppatore Web - Leonardo Service Provider S.p.A. (Aprile 2007 - Settembre 2014)
+Palermo, Italy
+- Progettazione di servizi interoperabili Java/.NET e database SQL Server (Gratta & Vinci online collaudato a 19 transazioni/sec).
+- Sviluppo di back-office e infrastrutture di servizio con ASP.NET, C#, SQL Server e XML/XSLT.
+
+### Sviluppatore software / System Engineer - Esperienze precedenti selezionate (2001 - 2007)
+Palermo, Italy
+- Sviluppo di applicazioni ASP.NET, VB.NET/VB6 e SQL Server/MSDE.
+- Realizzazione di un’applicazione client/server SOAP/XML per l’aggiornamento dati di circa 200 BetShop.
+- Gestione di infrastrutture Windows Server, Active Directory, DHCP/DNS.
 
 ## Independent Projects
-<!-- Projects outside of employment: freelance, open source, personal -->
-- **[PROJECT_NAME]**: [DESCRIPTION]
+- **CSharp.Essentials / LoggerHelper**: Progettazione architettura modulare a plugin con ModuleInitializer, ottimizzazione middleware HTTP con ArrayPool<char> e routing O(1), e politiche di resilienza.
+- **FlowScheduler**: Client LLM resiliente con thread-safe fallback/cooldown e guardrail SQL read-only per agenti AI.
+- **Server MCP .NET**: Telemetria e diagnostica applicativa esposta ad agenti AI tramite Model Context Protocol.
+- **Pipeline real-time BetFair**: Pipeline di ingestione dati streaming con System.Threading.Channels bounded e backpressure.
 
 ## Technical Skills
 
 ### Programming & ML
-- **[LANGUAGE]** ([PROFICIENCY]): [FRAMEWORKS_AND_LIBRARIES]
-- [OTHER_SKILLS]
+- **C# / .NET** (Expert): ASP.NET Core, REST API, LINQ, Dependency Injection, System.Threading.Channels, Worker Services, Clean Architecture
+- **AI Engineering** (Advanced): MCP (Model Context Protocol), Microsoft.Extensions.AI, Semantic Kernel, Ollama, RAG, AI guardrails
 
 ### Domain Expertise
-- [DOMAIN_1]
-- [DOMAIN_2]
+- Sistemi backend ad alte prestazioni e transazioni concorrenti.
+- Regolamentazioni gaming e scommesse online ADM/AAMS.
+- Logging strutturato, tracciamento asincrono e telemetria (Elasticsearch, OpenTelemetry, Serilog).
 
 ### Software & Tools
-- [TOOL_LIST]
+- Git, Azure DevOps, CI/CD pipelines, VS Code, Visual Studio, SSMS, Docker
 
-## Publications
-<!-- List peer-reviewed publications, if any -->
-1. [AUTHOR_LIST] ([YEAR]). [TITLE]. [JOURNAL]. [DOI_LINK]
-
-## Awards
-- [AWARD] - [EVENT] ([YEAR])
+## Certifications
+- **Certificazioni Microsoft** - Windows 2000 Professional e Server, Network Infrastructure, Directory Services e Security (Microsoft Certified)
 
 ## References
-- [NAME], [TITLE], [COMPANY] ([EMAIL], [PHONE])
-
-More references available upon request.
+- Disponibili su richiesta.
