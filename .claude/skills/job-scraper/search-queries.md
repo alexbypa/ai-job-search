@@ -30,9 +30,9 @@ Queries are grouped by priority. Write **each category in every language from yo
 These match your strongest and most desired career direction.
 
 ```
-site:linkedin.com/jobs "Senior .NET Developer" "Italy"
-site:linkedin.com/jobs "C# Backend Developer" "Italy"
-site:linkedin.com/jobs "Senior Backend Developer" C# "Italy"
+site:linkedin.com/jobs "Senior .NET Developer" "categorie protette" Remote
+site:linkedin.com/jobs "C# Backend Developer" "categorie protette" Remote
+site:linkedin.com/jobs "Senior Backend Developer" C# "categorie protette" Remote
 ```
 
 ### Priority 2: AI Backend Engineering & Integrations
@@ -40,10 +40,10 @@ site:linkedin.com/jobs "Senior Backend Developer" C# "Italy"
 These match your domain expertise in LLMs, MCP, and messaging pipelines.
 
 ```
-site:linkedin.com/jobs "AI Backend Engineer" "Italy"
-site:linkedin.com/jobs "Model Context Protocol" C#
-site:linkedin.com/jobs "Semantic Kernel" C#
-site:linkedin.com/jobs .NET RabbitMQ Kafka "Italy"
+site:linkedin.com/jobs "AI Backend Engineer" "categorie protette" Remote
+site:linkedin.com/jobs "Model Context Protocol" C# "categorie protette"
+site:linkedin.com/jobs "Semantic Kernel" C# "categorie protette"
+site:linkedin.com/jobs .NET RabbitMQ Kafka "categorie protette" Remote
 ```
 
 ### Priority 3: Lead Software Developer / System Architect
@@ -51,8 +51,8 @@ site:linkedin.com/jobs .NET RabbitMQ Kafka "Italy"
 Adjacent roles or leadership roles.
 
 ```
-site:linkedin.com/jobs "Lead Developer" .NET "Italy"
-site:linkedin.com/jobs "Software Architect" .NET "Italy"
+site:linkedin.com/jobs "Lead Developer" .NET "categorie protette" Remote
+site:linkedin.com/jobs "Software Architect" .NET "categorie protette" Remote
 ```
 
 ### Priority 4: Broader Technical roles in .NET
@@ -60,8 +60,10 @@ site:linkedin.com/jobs "Software Architect" .NET "Italy"
 Wider net for general .NET / backend developer roles.
 
 ```
-site:linkedin.com/jobs ".NET Developer" Remote "Italy"
-site:linkedin.com/jobs "C# Developer" Remote "Italy"
+site:linkedin.com/jobs ".NET Developer" "categorie protette" Remote
+site:linkedin.com/jobs "C# Developer" "categorie protette" Remote
+site:linkedin.com/jobs "C#" "68/99" Remote
+site:linkedin.com/jobs ".NET" "68/99" Remote
 ```
 
 ## Location Filter
