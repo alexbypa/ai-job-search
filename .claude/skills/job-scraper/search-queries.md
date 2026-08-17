@@ -4,35 +4,37 @@
 
 ## Installed portal CLIs (primary for `/scrape`)
 
-`/scrape` discovers every portal skill under `.agents/skills/*/SKILL.md` and runs its CLI first. Shipped country-agnostic CLIs include `linkedin-search` and `freehire-search`; Danish demos and any skill you add with `/add-portal` are included the same way. You do **not** need a matching `site:` line below for those CLIs to run.
+`/scrape` discovers every portal skill under `.agents/skills/*/SKILL.md` and runs its CLI first (e.g. `linkedin-search` and `indeed-search`).
 
-The `site:` query templates in this file are the **WebSearch fallback** — for portals without a CLI, company career pages, or when a CLI fails.
+The query terms below are **platform-agnostic** and must be used identically across all recruiting portals. When running a search:
+1. Pass the terms below as the query parameter (`--query` / `-q`) to the portal CLIs.
+2. Set the location and remote filters using the portal's specific command flags (e.g., `--location "Remote" --remote remote` for LinkedIn, or `--location "Da Remoto"` for Indeed), rather than embedding location words in the query itself.
+3. For the **WebSearch fallback** (when a CLI is unavailable or fails), the agent should dynamically prepend the appropriate site filter (e.g., `site:linkedin.com/jobs` or `site:it.indeed.com/jobs`) to these query terms.
 
-**Language scope:** write every query category in every language listed in your CLAUDE.md Languages table (typically 1-2, sometimes more). A posting requiring a language you have *not* declared, as a job condition, is excluded before scoring; a posting requiring a *higher level* than you declared in a language you *do* work in is flagged for your own judgment, not excluded — see `04-job-evaluation.md`'s Language Gate, the single source of truth for this rule. Translate each category's keywords rather than machine-translating word-for-word (e.g. "Frontend Developer" -> "Desarrollador Frontend", not a literal word-for-word translation) if you work in more than one language.
+**Language scope:** write every query category in every language listed in your CLAUDE.md Languages table (typically 1-2, sometimes more). Translate each category's keywords rather than machine-translating word-for-word.
 
 ## Search Sites
 
-Primary (your market's job boards - scaffold one with `/add-portal`):
-- **[YOUR_JOB_BOARD]** - your market's largest general job board
-- **linkedin.com/jobs** - LinkedIn job listings (filter: [YOUR_COUNTRY] / [YOUR_CITY]); also covered by `linkedin-search` CLI
-- **[YOUR_INDUSTRY_JOB_BOARD]** - a niche/industry board for your field (optional)
-- **[YOUR_ADDITIONAL_JOB_BOARD]** - another major board for your market (optional)
+Primary:
+- **linkedin.com/jobs** - Covered by `linkedin-search` CLI
+- **it.indeed.com** - Covered by `indeed-search` CLI
+- **[YOUR_JOB_BOARD]** - your market's largest general job board (if any)
 
 Secondary (company career pages via Google):
 - Direct Google searches with `site:` filters for known target companies
 
 ## Query Categories
 
-Queries are grouped by priority. Write **each category in every language from your Languages table** (see Language scope above). Combine each query with your location terms (e.g. your city, region, or metro area) where the site supports it.
+Queries are grouped by priority. Write **each category in every language from your Languages table** (Italian / English).
 
 ### Priority 1: Senior .NET Backend Developer (Italian / English)
 
 These match your strongest and most desired career direction.
 
 ```
-site:linkedin.com/jobs "Senior .NET Developer" "categorie protette" Remote
-site:linkedin.com/jobs "C# Backend Developer" "categorie protette" Remote
-site:linkedin.com/jobs "Senior Backend Developer" C# "categorie protette" Remote
+"Senior .NET Developer" "categorie protette"
+"C# Backend Developer" "categorie protette"
+"Senior Backend Developer" C# "categorie protette"
 ```
 
 ### Priority 2: AI Backend Engineering & Integrations
@@ -40,10 +42,10 @@ site:linkedin.com/jobs "Senior Backend Developer" C# "categorie protette" Remote
 These match your domain expertise in LLMs, MCP, and messaging pipelines.
 
 ```
-site:linkedin.com/jobs "AI Backend Engineer" "categorie protette" Remote
-site:linkedin.com/jobs "Model Context Protocol" C# "categorie protette"
-site:linkedin.com/jobs "Semantic Kernel" C# "categorie protette"
-site:linkedin.com/jobs .NET RabbitMQ Kafka "categorie protette" Remote
+"AI Backend Engineer" "categorie protette"
+"Model Context Protocol" C# "categorie protette"
+"Semantic Kernel" C# "categorie protette"
+.NET RabbitMQ Kafka "categorie protette"
 ```
 
 ### Priority 3: Lead Software Developer / System Architect
@@ -51,8 +53,8 @@ site:linkedin.com/jobs .NET RabbitMQ Kafka "categorie protette" Remote
 Adjacent roles or leadership roles.
 
 ```
-site:linkedin.com/jobs "Lead Developer" .NET "categorie protette" Remote
-site:linkedin.com/jobs "Software Architect" .NET "categorie protette" Remote
+"Lead Developer" .NET "categorie protette"
+"Software Architect" .NET "categorie protette"
 ```
 
 ### Priority 4: Broader Technical roles in .NET
@@ -60,10 +62,10 @@ site:linkedin.com/jobs "Software Architect" .NET "categorie protette" Remote
 Wider net for general .NET / backend developer roles.
 
 ```
-site:linkedin.com/jobs ".NET Developer" "categorie protette" Remote
-site:linkedin.com/jobs "C# Developer" "categorie protette" Remote
-site:linkedin.com/jobs "C#" "68/99" Remote
-site:linkedin.com/jobs ".NET" "68/99" Remote
+".NET Developer" "categorie protette"
+"C# Developer" "categorie protette"
+"C#" "68/99"
+".NET" "68/99"
 ```
 
 ## Location Filter

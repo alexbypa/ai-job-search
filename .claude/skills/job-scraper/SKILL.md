@@ -67,7 +67,7 @@ For each **enabled** portal skill:
 1. Read its `SKILL.md` to find the correct `bun run …` invocation and supported flags.
 2. Translate the query terms from `search-queries.md` into that portal's flag format (e.g. `--key`, `--search-string`, `--query`, filter codes — whatever the portal's SKILL.md specifies).
 3. Scope to the last 14 days using the portal's supported recency flag (`--jobage`, `--since <YYYY-MM-DD>`, `--order PublicationDate`, etc. — as documented per portal).
-4. Cap results to ~20 per call using the portal's limit flag.
+4. Cap results to ~5 per call using the portal's limit flag.
 5. Use `--format json` for machine-readable output.
 
 Run all portal CLI calls in parallel where possible using the Agent tool. Collect all `results` arrays into a single pool for Step 2, keeping each result tagged with its source portal skill (for Step 2 `detail` lookups).
@@ -118,11 +118,16 @@ If two or more results in this run's pool (from the same company, or sharing the
 
 For each new job, do a rapid fit check (NOT the full evaluation from `04-job-evaluation.md` - just a quick signal):
 
-- **High match**: Role directly involves your core skills
-- **Medium match**: Role is adjacent to your experience
-- **Low match**: Role requires significant skills you lack
+- **High match**: Role directly involves your core skills (C# / .NET development, distributed systems, etc.)
+- **Medium match**: Role is adjacent to your experience (AI backend, other backend development)
+- **Low match**: Role requires significant skills you lack, or fails the core filter criteria below.
 
-**Language override:** before assigning a match level, check the posting against `04-job-evaluation.md`'s Language Gate (a required language you haven't declared at all in your CLAUDE.md Languages table). A required language that's entirely undeclared overrides skill fit: mark it **Low** regardless of how well the skills align, and name it in the highlight bullets so it isn't buried under an otherwise-good-looking match. A **declared** language at a requirement that reads higher than your declared level is *not* an override — score fit normally, but add a red-flag bullet under that job's highlights (Step 5) quoting the posting's requirement next to your declared level, so the gap is visible without being auto-downgraded.
+**Mandatory Filters (apply before determining fit):**
+
+1. **C# / .NET Technical Filter:** The job title or description MUST mention C# or .NET (case-insensitive, including variants like `dotnet` or `dot-net`). If it does not, classify it as **Low match** and set its status to `"skipped"` (meaning it will be saved in `seen_jobs.json` so it isn't scanned again, but will NOT be presented in the final results table).
+2. **Protected Categories Gate:** Since the candidate requires a role designated for protected categories, the job posting description or title MUST contain references to "categorie protette", "legge 68/99", "68/99", "l. 68/99", "collocamento mirato", or "art. 1" / "art. 18". If it does not, classify it as **Low match** and set its status to `"skipped"`.
+
+**Language override:** before assigning a match level, check the posting against `04-job-evaluation.md`'s Language Gate (a required language you haven't declared at all in your CLAUDE.md Languages table). A required language that's entirely undeclared overrides skill fit: mark it **Low** regardless of how well the skills align, and set its status to `"skipped"`. A **declared** language at a requirement that reads higher than your declared level is *not* an override — score fit normally, but add a red-flag bullet under that job's highlights (Step 5) quoting the posting's requirement next to your declared level, so the gap is visible without being auto-downgraded.
 
 ### Step 4: Deduplicate & Store
 
