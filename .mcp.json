@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "loggerhelper": {
+      "type": "stdio",
+      "command": "loggerhelper-mcp"
+    }
+  }
+}

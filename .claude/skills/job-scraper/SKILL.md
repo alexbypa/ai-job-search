@@ -5,7 +5,7 @@ description: >
   (LinkedIn, local job boards, and any skills added with /add-portal). Deduplicates
   across runs. Triggers on: job scrape, find jobs, search jobs, new jobs, job search,
   scrape jobs, /scrape
-allowed-tools: Read, Write, Edit, Glob, Grep, Bash(bun --version), Bash(bun run .agents/skills/*/cli/src/cli.ts *), WebFetch, WebSearch, Agent, AskUserQuestion
+allowed-tools: Read, Write, Edit, Glob, Grep, GrepContentText, Bash(bun --version), Bash(bun run .agents/skills/*/cli/src/cli.ts *), WebFetch, WebSearch, Agent, AskUserQuestion
 ---
 
 # Job Scraper
@@ -122,10 +122,15 @@ For each new job, do a rapid fit check (NOT the full evaluation from `04-job-eva
 - **Medium match**: Role is adjacent to your experience (AI backend, other backend development)
 - **Low match**: Role requires significant skills you lack, or fails the core filter criteria below.
 
-**Mandatory Filters (apply before determining fit):**
+**Mandatory Filters:**
 
-1. **C# / .NET Technical Filter:** The job title or description MUST mention C# or .NET (case-insensitive, including variants like `dotnet` or `dot-net`). If it does not, classify it as **Low match** and set its status to `"skipped"` (meaning it will be saved in `seen_jobs.json` so it isn't scanned again, but will NOT be presented in the final results table).
-2. **Protected Categories Gate:** Since the candidate requires a role designated for protected categories, the job posting description or title MUST contain references to "categorie protette", "legge 68/99", "68/99", "l. 68/99", "collocamento mirato", or "art. 1" / "art. 18". If it does not, classify it as **Low match** and set its status to `"skipped"`.
+1. **Invoke the MCP Tool (Protected Categories Gate)**: Call the tool `GrepContentText` from your registered `logger-helper-mcp` server.
+   * Pass the full job description text to the `text` parameter.
+   * Pass the following list of keywords to the `keywords` parameter: `["68/99", "categorie protette", "collocamento mirato", "l. 68", "legge 68", "l.68/99"]`.
+2. **C# / .NET Technical Filter (Agent Check)**: Verify that the job title or description also mentions C# or .NET (case-insensitive, including `dotnet` or `dot-net`).
+3. **Evaluate the Output**:
+   * If the MCP tool does not find any of the keywords (returns `IsEligible: false` or equivalent negative output), OR if the job does not mention C#/.NET, classify the job as **Low match** and set its status to `"skipped"` (meaning it will be written to `seen_jobs.json` to prevent re-scraping but will NOT be shown in the final results table).
+   * Otherwise, if both filters pass, proceed to assess the match level (High/Medium) based on technical specifics.
 
 **Language override:** before assigning a match level, check the posting against `04-job-evaluation.md`'s Language Gate (a required language you haven't declared at all in your CLAUDE.md Languages table). A required language that's entirely undeclared overrides skill fit: mark it **Low** regardless of how well the skills align, and set its status to `"skipped"`. A **declared** language at a requirement that reads higher than your declared level is *not* an override — score fit normally, but add a red-flag bullet under that job's highlights (Step 5) quoting the posting's requirement next to your declared level, so the gap is visible without being auto-downgraded.
 

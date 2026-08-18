@@ -7,7 +7,7 @@ Questa roadmap descrive i passaggi necessari per aggiungere il tool `GrepContent
 ## Step 1: Aggiunta del Tool `GrepContentText` in C# (.NET 10)
 **Obiettivo:** Estendere la classe `LogTools` del tuo server MCP in `D:\Work\LoggerHelperMcp` per esporre un nuovo tool che analizza stringhe di testo.
 
-- [ ] **TODO** / **[ ] DONE**
+- [] **TODO** / **[x] DONE**
 
 ### Azione da compiere:
 Apri il file [LogTools.cs](file:///D:/Work/LoggerHelperMcp/src/LoggerHelper.Mcp.Server/Tools/LogTools.cs) del tuo server MCP e aggiungi le seguenti righe di codice:
@@ -62,7 +62,7 @@ Apri il file [LogTools.cs](file:///D:/Work/LoggerHelperMcp/src/LoggerHelper.Mcp.
 ## Step 2: Registrazione e Configurazione del Server MCP
 **Obiettivo:** Registrare il server MCP nel file di configurazione dell'agente AI affinché il tool `GrepContentText` sia visibile e utilizzabile.
 
-- [ ] **TODO** / **[ ] DONE**
+- [ ] **TODO** / **[x] DONE**
 
 ### Azione da compiere:
 Modifica il file di configurazione dei server MCP del tuo client AI (ad esempio `.mcp.json` o la configurazione globale di Claude Code / Antigravity IDE) registrando il server `LoggerHelperMcp`.
@@ -99,7 +99,7 @@ Esempio di configurazione stdio:
 ## Step 3: Modifica dello Skill `job-scraper`
 **Obiettivo:** Configurare lo skill in Markdown per forzare l'agente a utilizzare lo strumento MCP durante lo scraping.
 
-- [ ] **TODO** / **[ ] DONE**
+- [ ] **TODO** / **[x] DONE**
 
 ### Azione da compiere:
 Apri il file [SKILL.md](file:///d:/Work/ai-job-search/.claude/skills/job-scraper/SKILL.md) in questo workspace e apporta le seguenti due modifiche:
@@ -111,19 +111,27 @@ Apri il file [SKILL.md](file:///d:/Work/ai-job-search/.claude/skills/job-scraper
    ```
 
 2. **Istruisci l'agente ad applicare il filtro nello Step 3 (Quick Fit Assessment):**
-   Sostituisci la sezione dello *Step 3* con il seguente schema operativo:
+   Aggiorna la sezione dello *Step 3* in modo da includere il tool MCP mantenendo anche il controllo della lingua (*Language override*):
    ```markdown
    ### Step 3: Quick Fit Assessment
 
-   For each new job, perform the eligibility filters using the custom MCP tool:
+   For each new job, do a rapid fit check (NOT the full evaluation from `04-job-evaluation.md` - just a quick signal):
 
-   1. **Invoke the MCP Tool**: Call the tool `GrepContentText` from your registered `logger-helper-mcp` server.
-      * Pass the full job description text to the `text` parameter.
-      * Use default or configured keywords.
+   - **High match**: Role directly involves your core skills (C# / .NET development, distributed systems, etc.)
+   - **Medium match**: Role is adjacent to your experience (AI backend, other backend development)
+   - **Low match**: Role requires significant skills you lack, or fails the core filter criteria below.
 
-   2. **Evaluate the Tool Output**:
-      * If the tool returns `IsEligible: false`, classify the job as **Low match** and immediately set its status to `"skipped"` (meaning it will be written to `seen_jobs.json` to prevent re-scraping but will NOT be shown to the user).
-      * If the tool returns `IsEligible: true`, proceed to assess the match level (High/Medium) based on technical specifics.
+    **Mandatory Filters:**
+
+    1. **Invoke the MCP Tool (Protected Categories Gate)**: Call the tool `GrepContentText` from your registered `logger-helper-mcp` server.
+       * Pass the full job description text to the `text` parameter.
+       * Pass the following list of keywords to the `keywords` parameter: `["68/99", "categorie protette", "collocamento mirato", "l. 68", "legge 68", "l.68/99"]`.
+    2. **C# / .NET Technical Filter (Agent Check)**: Verify that the job title or description also mentions C# or .NET (case-insensitive, including `dotnet` or `dot-net`).
+    3. **Evaluate the Output**:
+       * If the MCP tool does not find any of the keywords (returns `IsEligible: false` or equivalent negative output), OR if the job does not mention C#/.NET, classify the job as **Low match** and set its status to `"skipped"` (meaning it will be written to `seen_jobs.json` to prevent re-scraping but will NOT be shown in the final results table).
+       * Otherwise, if both filters pass, proceed to assess the match level (High/Medium) based on technical specifics.
+
+    **Language override:** before assigning a match level, check the posting against `04-job-evaluation.md`'s Language Gate (a required language you haven't declared at all in your CLAUDE.md Languages table). A required language that's entirely undeclared overrides skill fit: mark it **Low** regardless of how well the skills align, and set its status to `"skipped"`. A **declared** language at a requirement that reads higher than your declared level is *not* an override — score fit normally, but add a red-flag bullet under that job's highlights (Step 5) quoting the posting's requirement next to your declared level, so the gap is visible without being auto-downgraded.
    ```
 
 ---
