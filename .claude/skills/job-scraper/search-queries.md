@@ -18,6 +18,7 @@ The query terms below are **platform-agnostic** and must be used identically acr
 Primary:
 - **linkedin.com/jobs** - Covered by `linkedin-search` CLI
 - **it.indeed.com** - Covered by `indeed-search` CLI
+- **iprogrammatori.it** - Covered by `iprogrammatori-search` CLI
 - **[YOUR_JOB_BOARD]** - your market's largest general job board (if any)
 
 Secondary (company career pages via Google):
