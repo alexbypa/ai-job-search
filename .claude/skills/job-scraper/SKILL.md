@@ -118,7 +118,7 @@ If two or more results in this run's pool (from the same company, or sharing the
 
 For each new job, do a rapid fit check (NOT the full evaluation from `04-job-evaluation.md` - just a quick signal):
 
-- **High match**: Role directly involves your core skills (C# / .NET development, distributed systems, etc.)
+- **High match**: Role directly involves your core skills (C# / .NET development, distributed systems, etc.) OR explicitly contains "Categorie Protette" / "Legge 68/99" and matches C# / .NET.
 - **Medium match**: Role is adjacent to your experience (AI backend, other backend development)
 - **Low match**: Role requires significant skills you lack, or fails the core filter criteria below.
 
@@ -128,9 +128,17 @@ For each new job, do a rapid fit check (NOT the full evaluation from `04-job-eva
    * Pass the full job description text to the `text` parameter.
    * Pass the following list of keywords to the `keywords` parameter: `["68/99", "categorie protette", "collocamento mirato", "l. 68", "legge 68", "l.68/99"]`.
 2. **C# / .NET Technical Filter (Agent Check)**: Verify that the job title or description also mentions C# or .NET (case-insensitive, including `dotnet` or `dot-net`).
-3. **Evaluate the Output**:
-   * If the MCP tool does not find any of the keywords (returns `IsEligible: false` or equivalent negative output), OR if the job does not mention C#/.NET, classify the job as **Low match** and set its status to `"skipped"` (meaning it will be written to `seen_jobs.json` to prevent re-scraping but will NOT be shown in the final results table).
-   * Otherwise, if both filters pass, proceed to assess the match level (High/Medium) based on technical specifics.
+3. **Location and Logistics Filter**: Verify the job location and work mode:
+   * If the location is Palermo, Italy: PASS (any mode: Remote, Hybrid, or On-site is allowed).
+   * If the location is NOT Palermo: PASS only if the role is Full Remote (or Smart Working/Da Remoto). If it requires hybrid or on-site work outside Palermo, FAIL.
+4. **Evaluate the Output**:
+   * If the MCP tool does not find any of the keywords (returns `IsEligible: false` or equivalent negative output), OR if the job does not mention C#/.NET, OR if the location filter fails, classify the job as **Low match** and set its status to `"skipped"` (meaning it will be written to `seen_jobs.json` to prevent re-scraping but will NOT be shown in the final results table).
+   * Otherwise, if all filters pass:
+     * If the job is located outside Palermo, Italy and is designated as "Smart Working" (rather than explicitly "Full Remote"), classify it as **Medium match** (allowing the user to manually verify if office presence is required).
+     * Otherwise, if the job contains references to Protected Categories (Legge 68/99), classify it as **High match**.
+     * Otherwise, assess the match level (High/Medium) based on technical specifics.
+
+
 
 **Language override:** before assigning a match level, check the posting against `04-job-evaluation.md`'s Language Gate (a required language you haven't declared at all in your CLAUDE.md Languages table). A required language that's entirely undeclared overrides skill fit: mark it **Low** regardless of how well the skills align, and set its status to `"skipped"`. A **declared** language at a requirement that reads higher than your declared level is *not* an override — score fit normally, but add a red-flag bullet under that job's highlights (Step 5) quoting the posting's requirement next to your declared level, so the gap is visible without being auto-downgraded.
 
@@ -224,6 +232,14 @@ health: <portal-name> - broken (0 results for the SKILL.md test query and a broa
 |---|-----|-------|---------|----------|----------|-----|
 | 1 | High | ... | ... | ... | ... | [Link](...) |
 
+### Skipped / Filtered Out Candidates
+
+Always present a clear table of all jobs found during this run that were filtered out, detailing the specific reason for skipping:
+
+| # | Title | Company | Location | Reason Skipped | URL |
+|---|-------|---------|----------|----------------|-----|
+| 1 | ... | ... | ... | ... (e.g., "No L.68/99 keyword", "Hybrid outside Palermo") | [Link](...) |
+
 If Step 2.5 flagged a mass-posting pattern, note it in the Title cell (e.g. "Frontend Developer (posted in 6 cities)") rather than burying it. Do the same for a declared-language-insufficient-level flag from the Language Gate (e.g. "Backend Engineer ⚠ fluent English required") - both are signals the user should see at a glance, not just in the detail highlights below.
 
 ### High-Match Highlights
@@ -256,9 +272,9 @@ If the user decides to apply to any job, the tracker row is written by **job-app
 
 1. **Never fabricate job postings.** Only present jobs from actual CLI search/detail output or WebSearch/WebFetch results.
 2. **Respect deduplication.** Always check seen_jobs.json AND job_search_tracker.csv before presenting.
-3. **Focus on configured geographic area.** Skip jobs that require relocation or are clearly outside commute range.
+3. **Focus on Palermo or Remote roles.** Palermo roles can be remote, hybrid, or on-site. Roles outside Palermo must be Full Remote. Skip jobs requiring hybrid/on-site outside Palermo or relocation.
 4. **Only open positions.** Skip postings with expired deadlines or those marked as closed.
-5. **Be efficient with detail fetches.** Don't run `detail` or WebFetch on every search hit — pre-filter by title/snippet, then fetch only promising matches.
+5. **Be efficient with detail fetches and Token limit.** Don't run `detail` or WebFetch on every search hit — pre-filter by title/snippet first. Limit detail fetches to a **maximum of 5 candidates per run** to prevent token waste. If there are more than 5 potential candidates, stop and ask the user for confirmation before fetching more.
 6. **Parallel searches.** Run portal CLI searches in parallel; use WebSearch only for gaps the CLIs don't cover.
 7. **No automated people lookups.** Referral contacts (Step 4.5) are LinkedIn search links only - never fetch or scrape LinkedIn people-search result pages programmatically.
 8. **Health checks are bounded and honest.** Step 4.75 spends at most one probe, one retry, and (in `health` mode) one detail fetch per portal - a diagnosis, not a crawl. A rate-limit is never evidence of breakage. Health verdicts come only from observed CLI output; a portal that could not be tested is reported as inconclusive, never guessed. The `enabled` toggle is the only thing the health check may edit, and only with confirmation.

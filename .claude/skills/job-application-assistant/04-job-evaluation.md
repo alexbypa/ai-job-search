@@ -105,10 +105,15 @@ Does the role and company culture match the behavioral profile?
 **Red flags to research:** Department disorganization, work dominated by maintenance over development, poor chemistry with leadership, culture mismatches. Check reviews, media coverage, LinkedIn connections, and network contacts for insider perspective.
 
 ### 4. Location & Logistics (Pass/Fail + Notes)
-- Within commute range: PASS
-- Remote with occasional office: PASS
+- Location is Palermo, Italy: PASS (any mode: Full Remote, Hybrid, or On-site)
+- Location is NOT Palermo, Italy:
+  - If Full Remote: PASS
+  - If Smart Working: FLAG as Medium Fit (to be manually verified if periodic office presence is required)
+  - If Hybrid or On-site: FAIL (deal-breaker — do not apply/score)
 - Requires relocation: FAIL (deal-breaker)
 - Frequent international travel: FLAG (discuss with user)
+
+
 
 ### 5. Career Alignment & Motivation (0-100)
 Does this role advance career goals and contain tasks that energize?
