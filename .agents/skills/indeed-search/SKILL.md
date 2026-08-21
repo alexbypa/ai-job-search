@@ -35,7 +35,7 @@ bun run .agents/skills/indeed-search/cli/src/cli.ts search --location "<localit�
 **Flag principali:**
 - `--location <text>` / `-l <text>` — **richiesto.** Località dell'annuncio (es. `"Milano"`, `"Roma"`, o `"Da Remoto"`).
 - `--query <text>` / `-q <text>` — Parola chiave della ricerca (es. `".net"`, `"frontend"`).
-- `--jobage <days>` — Pubblicati negli ultimi N giorni (es. `1`, `3`, `7`, `14`). Mappa al parametro `fromage` di Indeed.
+- `--jobage <days>` — Pubblicati negli ultimi N giorni (es. `1`, `3`, `7`, `14`, `60`). Mappa al parametro `fromage` di Indeed.
 - `--page <n>` — Numero di pagina (1-indexed, con offset `start = (page - 1) * 10`).
 - `--limit <n>` / `-n <n>` — Limite del numero di risultati da restituire.
 - `--format json|table|plain` — default `json`.

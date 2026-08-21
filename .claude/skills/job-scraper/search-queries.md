@@ -34,39 +34,6 @@ These match your strongest and most desired career direction.
 
 ```
 "Senior .NET Developer" "categorie protette"
-"C# Backend Developer" "categorie protette"
-"Senior Backend Developer" C# "categorie protette"
-```
-
-### Priority 2: AI Backend Engineering & Integrations
-
-These match your domain expertise in LLMs, MCP, and messaging pipelines.
-
-```
-"AI Backend Engineer" "categorie protette"
-"Model Context Protocol" C# "categorie protette"
-"Semantic Kernel" C# "categorie protette"
-.NET RabbitMQ Kafka "categorie protette"
-```
-
-### Priority 3: Lead Software Developer / System Architect
-
-Adjacent roles or leadership roles.
-
-```
-"Lead Developer" .NET "categorie protette"
-"Software Architect" .NET "categorie protette"
-```
-
-### Priority 4: Broader Technical roles in .NET
-
-Wider net for general .NET / backend developer roles.
-
-```
-".NET Developer" "categorie protette"
-"C# Developer" "categorie protette"
-"C#" "68/99"
-".NET" "68/99"
 ```
 
 ## Location Filter
@@ -82,7 +49,7 @@ Your working languages and levels are in CLAUDE.md's Languages table. When filte
 
 ## Date Filter
 
-Only include jobs posted within the last 14 days, or with an application deadline that has not yet passed. If a posting date cannot be determined, include it but flag as "date unknown".
+Only include jobs posted within the last 60 days, or with an application deadline that has not yet passed. If a posting date cannot be determined, include it but flag as "date unknown".
 
 ## Adapting Queries
 

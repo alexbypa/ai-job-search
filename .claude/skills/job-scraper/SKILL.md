@@ -124,18 +124,21 @@ For each new job, do a rapid fit check (NOT the full evaluation from `04-job-eva
 
 **Mandatory Filters:**
 
-1. **Invoke the MCP Tool (Protected Categories Gate)**: Call the tool `GrepContentText` from your registered `logger-helper-mcp` server.
-   * Pass the full job description text to the `text` parameter.
-   * Pass the following list of keywords to the `keywords` parameter: `["68/99", "categorie protette", "collocamento mirato", "l. 68", "legge 68", "l.68/99"]`.
-2. **C# / .NET Technical Filter (Agent Check)**: Verify that the job title or description also mentions C# or .NET (case-insensitive, including `dotnet` or `dot-net`).
-3. **Location and Logistics Filter**: Verify the job location and work mode:
+1. **C# / .NET Technical Filter (Agent Check)**: Verify that the job title or description mentions C# or .NET (case-insensitive, including `dotnet` or `dot-net`).
+2. **Location and Logistics Filter**: Verify the job location and work mode:
    * If the location is Palermo, Italy: PASS (any mode: Remote, Hybrid, or On-site is allowed).
    * If the location is NOT Palermo: PASS only if the role is Full Remote (or Smart Working/Da Remoto). If it requires hybrid or on-site work outside Palermo, FAIL.
-4. **Evaluate the Output**:
-   * If the MCP tool does not find any of the keywords (returns `IsEligible: false` or equivalent negative output), OR if the job does not mention C#/.NET, OR if the location filter fails, classify the job as **Low match** and set its status to `"skipped"` (meaning it will be written to `seen_jobs.json` to prevent re-scraping but will NOT be shown in the final results table).
-   * Otherwise, if all filters pass:
+
+**Evaluation & Protected Categories Check:**
+
+1. **Invoke the MCP Tool (Protected Categories Check)**: Call the tool `GrepContentText` from your registered `logger-helper-mcp` server.
+   * Pass the full job description text to the `text` parameter.
+   * Pass the following list of keywords to the `keywords` parameter: `["68/99", "categorie protette", "collocamento mirato", "l. 68", "legge 68", "l.68/99"]`.
+2. **Evaluate the Output**:
+   * If the job does not mention C#/.NET, OR if the location filter fails, classify the job as **Low match** and set its status to `"skipped"` (meaning it will be written to `seen_jobs.json` to prevent re-scraping but will NOT be shown in the final results table).
+   * Otherwise, if the mandatory filters pass:
+     * If the MCP tool finds any of the keywords (returns `IsEligible: true` or equivalent positive output), classify it as **High match** (auto-elevate to High).
      * If the job is located outside Palermo, Italy and is designated as "Smart Working" (rather than explicitly "Full Remote"), classify it as **Medium match** (allowing the user to manually verify if office presence is required).
-     * Otherwise, if the job contains references to Protected Categories (Legge 68/99), classify it as **High match**.
      * Otherwise, assess the match level (High/Medium) based on technical specifics.
 
 

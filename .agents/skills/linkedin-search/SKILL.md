@@ -49,7 +49,7 @@ bun run .agents/skills/linkedin-search/cli/src/cli.ts search --location "<place>
 Key flags:
 - `--location <text>` / `-l <text>` — **required.** A LinkedIn place string, e.g. `"Mumbai, Maharashtra, India"`, `"Berlin, Germany"`, `"London, United Kingdom"`, or `"Remote"`.
 - `--query <text>` / `-q <text>` — keyword search (title, skill, role). Recommended.
-- `--jobage <days>` — posted within N days: `1`, `7`, `14`, `30`. Omit for all postings.
+- `--jobage <days>` — posted within N days: `1`, `7`, `14`, `30`, `60`. Omit for all postings.
 - `--jobage-minutes <n>` — posted within N minutes (sub-day precision, e.g. `30`). Conflicts with `--jobage` — pass only one.
 - `--remote <mode>` — `remote`, `hybrid`, or `onsite` (workplace-type filter).
 - `--page <n>` — page number (1-indexed, 10 results per page).

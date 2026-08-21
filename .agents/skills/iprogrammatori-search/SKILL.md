@@ -34,7 +34,7 @@ bun run .agents/skills/iprogrammatori-search/cli/src/cli.ts search --query "<par
 **Flag principali:**
 - `--query <text>` / `-q <text>` — **consigliato.** Parola chiave della ricerca (es. `"csharp"`, `"dotnet"`, `"java"`). Se non passata, cerca annunci per "csharp" di default.
 - `--location <text>` / `-l <text>` — Località dell'annuncio (es. `"Milano"`, `"Roma"`, o `"Remoto"`).
-- `--jobage <days>` — Pubblicati negli ultimi N giorni (es. `1`, `3`, `7`, `14`).
+- `--jobage <days>` — Pubblicati negli ultimi N giorni (es. `1`, `3`, `7`, `14`, `60`).
 - `--limit <n>` / `-n <n>` — Limite del numero di risultati da restituire.
 - `--format json|table|plain` — default `json`.
 
