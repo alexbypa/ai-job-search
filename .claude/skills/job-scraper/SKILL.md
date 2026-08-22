@@ -214,9 +214,9 @@ skipped (disabled): <portal-name>, <portal-name>
 health: <portal-name> - degraded (company null on all 12 results); parsing anchors in .agents/skills/<portal-name>/url-reference.md
 health: <portal-name> - broken (0 results for the SKILL.md test query and a broader retry); parsing anchors in .agents/skills/<portal-name>/url-reference.md
 
-| # | Fit | Title | Company | Location | Deadline | URL |
-|---|-----|-------|---------|----------|----------|-----|
-| 1 | High | ... | ... | ... | ... | [Link](...) |
+| # | Fit | Score | Title | Company | Location | Deadline | URL |
+|---|-----|-------|-------|---------|----------|----------|-----|
+| 1 | High | 45 | ... | ... | ... | ... | [Link](...) |
 
 ### Skipped / Filtered Out Candidates
 

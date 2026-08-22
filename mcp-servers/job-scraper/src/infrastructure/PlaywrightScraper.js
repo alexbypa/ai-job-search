@@ -3,7 +3,11 @@ import fs from "fs";
 import { ScrapingProvider } from "../interfaces/ScrapingProvider.js";
 import { Readability } from "@mozilla/readability";
 import { JSDOM } from "jsdom";
+import path from "path";
+import { fileURLToPath } from "url";
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 export class PlaywrightScraper extends ScrapingProvider {
     /**
      * Visita un URL ed estrae il contenuto testuale della pagina in modo ottimizzato.
@@ -23,12 +27,27 @@ export class PlaywrightScraper extends ScrapingProvider {
                 viewport: { width: 1280, height: 800 }
             };
 
-            const statePath = "state.json";
-            if (fs.existsSync(statePath)) {
-                console.error("[PlaywrightScraper] File state.json rilevato. Caricamento sessione autenticata...");
+            // Cerchiamo state.json in più percorsi possibili
+            const possibleStatePaths = [
+                path.resolve(process.cwd(), "state.json"),
+                path.resolve(process.cwd(), "mcp-servers/job-scraper/state.json"),
+                path.resolve(__dirname, "../../state.json"),
+                "state.json"
+            ];
+            
+            let statePath = null;
+            for (const p of possibleStatePaths) {
+                if (fs.existsSync(p)) {
+                    statePath = p;
+                    break;
+                }
+            }
+
+            if (statePath) {
+                console.error(`[PlaywrightScraper] File state.json rilevato in: ${statePath}. Caricamento sessione autenticata...`);
                 contextOptions.storageState = statePath;
             } else {
-                console.error("[PlaywrightScraper] ATTENZIONE: Nessun file state.json trovato. Scraping come guest (rischio login wall).");
+                console.error("[PlaywrightScraper] ATTENZIONE: Nessun file state.json trovato nei path attesi. Scraping come guest (rischio login wall).");
             }
 
             // Creiamo un contesto
