@@ -1,0 +1,529 @@
+LinkedIn respects your privacy
+
+LinkedIn and 3rd parties use essential and non-essential cookies to provide, secure, analyze and improve our Services, and to show you relevant ads (including professional and job ads) on and off LinkedIn. Learn more in our Cookie Policy.
+
+Select Accept to consent or Reject to decline non-essential cookies for this use. You can update your choices at any time in your settings.
+
+Accept Reject
+Skip to main content
+LinkedIn
+Backend Developer - .NET in Palermo
+Expand search
+Jobs 
+This button displays the currently selected search type. When expanded it provides a list of search options that will switch the search inputs to match the current selection.
+Jobs
+People
+Learning
+ Clear text
+ Clear text
+Clear text
+Clear text
+ Clear text
+Sign in Join now 
+Backend Developer - .NET
+MC Engineering Turin, Piedmont, Italy
+Apply
+Join or sign in to find your next job
+
+Join to apply for the Backend Developer - .NET role at MC Engineering
+
+Email or phone
+
+Password
+ Show
+
+Forgot password? Sign in
+Sign in with Email
+
+or
+
+New to LinkedIn? Join now
+
+By clicking “Continue” to join or sign in, you agree to LinkedIn User Agreement, Privacy Policy, and Cookie Policy. LinkedIn is partially supported by advertising, which means we may use your data to show you sponsored content and ads that we believe may be of interest to you.
+
+Backend Developer - .NET
+MC Engineering Turin, Piedmont, Italy
+1 week ago
+Over 200 applicants
+  
+
+See who MC Engineering has hired for this role
+
+Apply
+Join or sign in to find your next job
+
+Join to apply for the Backend Developer - .NET role at MC Engineering
+
+Email or phone
+
+Password
+ Show
+
+Forgot password? Sign in
+Sign in with Email
+
+or
+
+New to LinkedIn? Join now
+
+By clicking “Continue” to join or sign in, you agree to LinkedIn User Agreement, Privacy Policy, and Cookie Policy. LinkedIn is partially supported by advertising, which means we may use your data to show you sponsored content and ads that we believe may be of interest to you.
+
+Save
+Report this job
+Descrizione azienda
+
+MC Engineering è una dinamica società di consulenza informatica, con sedi a Torino, Milano, Roma e Bari. Lavoriamo a stretto contatto con realtà innovative nel mondo ICT, portando avanti progetti che spaziano tra vari settori.
+
+Per noi, le persone sono al centro di tutto: puntiamo su un continuo aggiornamento, sulla crescita costante e sull’eccellenza, per affrontare insieme sfide innovative e fare la differenza nel nostro settore.
+
+Posizione
+
+Cosa farai con noi?
+
+Come Backend Developer - .NET entrerai a far parte di team strutturati impegnati nello sviluppo di soluzioni enterprise in ambito backend, con particolare focus su architetture a microservizi e sistemi distribuiti. Ti occuperai della progettazione, sviluppo e manutenzione di applicazioni backend basate su C# e .NET Core, contribuendo alla realizzazione di API scalabili e performanti.
+
+Sarai coinvolto nello sviluppo di soluzioni basate su architetture a microservizi, nell’integrazione di sistemi asincroni tramite code e message broker come RabbitMQ, Kafka e IBM MQ, e nella gestione di database relazionali come Microsoft SQL Server. Collaborerai inoltre alla definizione e all’evoluzione di soluzioni enterprise in ambienti complessi, con attenzione alla qualità del codice, alla scalabilità e alle performance.
+
+Lavorerai in contesti strutturati e orientati all’innovazione, utilizzando strumenti di version control e tecnologie containerizzate per supportare il ciclo di vita delle applicazioni.
+
+Requisiti
+
+Competenze richieste
+
+
+Laurea o Master in discipline scientifiche (preferibilmente Informatica o Ingegneria)
+Esperienza di almeno 5 anni nel ruolo di Backend Developer / Software Engineer
+Ottima conoscenza di C# e .NET Core
+Esperienza nello sviluppo con ASP.NET MVC / ASP.NET Framework
+Esperienza con architetture a microservizi
+Conoscenza di sistemi di messaggistica e programmazione asincrona (RabbitMQ, Kafka, IBM MQ)
+Ottima conoscenza di Microsoft SQL Server e linguaggio SQL
+Esperienza con sistemi di versionamento (Git / Azure DevOps)
+Conoscenza di tecnologie container (Docker, Kubernetes)
+Conoscenza di principi di integrazione tra sistemi enterprise
+Gradita conoscenza di metodologie Agile / Scrum
+Gradite certificazioni Microsoft in ambito .NET
+Gradita Esperienza con altri DBMS (Oracle, MySQL, DB2, Redis)
+Gradita conoscenza base di ambienti Unix/Linux
+
+
+Lingua inglese
+
+Buona conoscenza della lingua inglese (livello B2)
+
+Modalità e/o Sede di Lavoro
+
+Full Remote
+
+Altre informazioni
+
+Cosa Offriamo
+
+Inserimento in organico con un inquadramento commisurato all’esperienza professionale pregressa e una retribuzione in linea con le reali capacità del candidato. Se sei una persona appassionata di tecnologia, desiderosa di crescere in un ambiente che promuove l’eccellenza, questa è l’occasione che fa per te! Unisciti a MC Engineering: dove le idee diventano innovazione!
+
+Il presente annuncio è rivolto ad entrambi i sessi, ai sensi delle leggi 903/77 e 125/91, e a persone di tutte le età e tutte le nazionalità, ai sensi dei DLgs 215/03 e 216/03.
+
+Retribuzione
+
+Da € 30.000 a € 45.000
+Show more Show less
+Seniority level
+Mid-Senior level
+Employment type
+Full-time
+Job function
+Engineering and Information Technology
+Industries
+Information Technology & Services
+  
+
+Referrals increase your chances of interviewing at MC Engineering by 2x
+
+See who you know
+Get notified when a new job is posted.
+ Set alert
+Sign in to set job alerts for “Dotnet Developer” roles.
+Email or phone
+
+Password
+ Show
+
+Forgot password? Sign in
+Sign in with Email
+
+or
+
+New to LinkedIn? Join now
+
+By clicking “Continue” to join or sign in, you agree to LinkedIn User Agreement, Privacy Policy, and Cookie Policy. LinkedIn is partially supported by advertising, which means we may use your data to show you sponsored content and ads that we believe may be of interest to you.
+
+Similar jobs
+Software Engineer C# 
+Software Engineer C#
+Eckstein s.r.l.
+Biella, Piedmont, Italy 4 weeks ago
+Software Engineer 
+Software Engineer
+AYES - Management & Technology Consulting
+Piedmont, Italy 2 weeks ago
+Senior Backend Developer - C#/.NET (Rif. 2026-104) 
+Senior Backend Developer - C#/.NET (Rif. 2026-104)
+aizoOn Technology Consulting
+Turin, Piedmont, Italy 3 weeks ago
+.NET Full Stack Developer (Middle) 
+.NET Full Stack Developer (Middle)
+EnginSoft Italy
+Turin, Piedmont, Italy 2 weeks ago
+AWS Cloud Developer (C# Microservices ) 
+AWS Cloud Developer (C# Microservices )
+Quest Global
+Turin, Piedmont, Italy 1 month ago
+Developer 
+Developer
+MSC Mediterranean Shipping Company
+Turin, Piedmont, Italy 1 week ago
+Senior .NET Software Engineer 
+Senior .NET Software Engineer
+Deltatre
+Turin, Piedmont, Italy 2 weeks ago
+Senior .NET Developer 
+Senior .NET Developer
+ORBYTA
+Turin, Piedmont, Italy 1 month ago
+Sviluppatore Dot Net 
+Sviluppatore Dot Net
+Sistemi S.p.A.
+Turin, Piedmont, Italy 2 weeks ago
+Full Stack Developer 
+Full Stack Developer
+MSC Mediterranean Shipping Company
+Turin, Piedmont, Italy 1 week ago
+Sviluppatore Web 
+Sviluppatore Web
+Leonardo WEB S.r.l.
+Manta, Piedmont, Italy 1 week ago
+Full Stack Web Developer - .NET/React 
+Full Stack Web Developer - .NET/React
+MC Engineering
+Turin, Piedmont, Italy 1 week ago
+FULL STACK DEVELOPER 
+FULL STACK DEVELOPER
+ACTIA ITALIA
+Turin, Piedmont, Italy 2 weeks ago
+Full Stack Developer (React/.NET) 
+Full Stack Developer (React/.NET)
+ORBYTA
+Turin, Piedmont, Italy 2 months ago
+Full Stack Engineer - RIF 99790 
+Full Stack Engineer - RIF 99790
+WeHunt
+Vercelli, Piedmont, Italy €35,000 - €42,000 3 weeks ago
+Programmatore C#, SQL Server, WinForms 
+Programmatore C#, SQL Server, WinForms
+Zerouno Software S.r.l.
+Cuneo, Piedmont, Italy 2 weeks ago
+Junior Software Application Engineer 
+Junior Software Application Engineer
+RINA
+Turin, Piedmont, Italy 2 days ago
+Software Architect 
+Software Architect
+Dedagroup
+Turin, Piedmont, Italy €45,000 - €60,000 1 week ago
+Software Architect 
+Software Architect
+Dedagroup
+Roddi, Piedmont, Italy €45,000 - €60,000 6 days ago
+Backend Developer 
+Backend Developer
+Zucchetti
+Turin, Piedmont, Italy 1 week ago
+Back end Developer 
+Back end Developer
+Teoresi Group
+Turin, Piedmont, Italy 2 weeks ago
+Backend Software Developer - Arduino, Turin, Italy 
+Backend Software Developer - Arduino, Turin, Italy
+Qualcomm
+Turin, Piedmont, Italy 1 week ago
+Junior Developer - Candidatura Spontanea 
+Junior Developer - Candidatura Spontanea
+Bit S.P.A.
+Turin, Piedmont, Italy 3 months ago
+SVILUPPATORE BACK END 
+SVILUPPATORE BACK END
+Albelissa Engineering, IT & Digital Solutions
+Turin, Piedmont, Italy 3 months ago
+Backend Developer 
+Backend Developer
+Accessiway
+Turin, Piedmont, Italy 1 week ago
+Senior Full Stack Developer (.NET / React) | Logistics Tech 
+Senior Full Stack Developer (.NET / React) | Logistics Tech
+HumaVerse
+Piedmont, Italy 3 weeks ago
+Software Developer/Engineer - Graduate Development Program 
+Software Developer/Engineer - Graduate Development Program
+ION
+Turin, Piedmont, Italy 1 week ago
+Show more jobs like this Show fewer jobs like this
+People also viewed
+Software Development Engineer , Amazon University Talent Aquisition (AUTA)
+Software Development Engineer , Amazon University Talent Aquisition (AUTA)
+
+Amazon
+
+Asti, Piedmont, Italy 3 days ago
+Full Stack Software Developer
+Full Stack Software Developer
+
+IDM Consulting S.r.l.
+
+Turin, Piedmont, Italy 3 weeks ago
+Java Developer
+Java Developer
+
+Teoresi Group
+
+Turin, Piedmont, Italy 1 week ago
+Backend Java Developer
+Backend Java Developer
+
+KeyBiz
+
+Biella, Piedmont, Italy €28,000 - €30,000 4 days ago
+ERP Developer
+ERP Developer
+
+EOS Solutions Group
+
+Cuneo, Piedmont, Italy 3 weeks ago
+Generative AI Software Engineer
+Generative AI Software Engineer
+
+Accenture Italia
+
+Turin, Piedmont, Italy 1 week ago
+Full Stack Developer
+Full Stack Developer
+
+CityZ
+
+Turin, Piedmont, Italy 9 hours ago
+Software Developer Manager
+Software Developer Manager
+
+Albelissa Engineering, IT & Digital Solutions
+
+Racconigi, Piedmont, Italy 2 months ago
+Software Engineer
+Software Engineer
+
+Black Shire S.r.l.
+
+Vezza d'Alba, Piedmont, Italy 2 months ago
+Java Developer
+Java Developer
+
+Alpitour World
+
+Turin, Piedmont, Italy €30,000 - €33,000 10 months ago
+Similar Searches
+Developer jobs
+1,471 open jobs
+Software Engineer jobs
+5,322 open jobs
+Web Programmer jobs
+326 open jobs
+Engineer jobs
+2,039 open jobs
+Web Developer jobs
+1,186 open jobs
+Cobol Programmer jobs
+27 open jobs
+Scrum Master jobs
+2,200 open jobs
+Analyst jobs
+1,046 open jobs
+Software Tester jobs
+214 open jobs
+Sculptor jobs
+76 open jobs
+Functional Analyst jobs
+725 open jobs
+Architect jobs
+580 open jobs
+System Engineer jobs
+1,158 open jobs
+Business Analyst jobs
+1,471 open jobs
+Test Engineer jobs
+4,484 open jobs
+User Experience Designer jobs
+223 open jobs
+Information Technology Technical Specialist jobs
+724 open jobs
+Junior Engineer jobs
+997 open jobs
+Project Manager jobs
+4,206 open jobs
+Automation Engineer jobs
+112 open jobs
+Game Tester jobs
+3,752 open jobs
+Security Engineer jobs
+356 open jobs
+Business Intelligence Specialist jobs
+4,545 open jobs
+Computer Engineering jobs
+2,716 open jobs
+Information Technology Engineer jobs
+730 open jobs
+Show more Show less
+Explore top content on LinkedIn
+
+Find curated posts and insights for relevant topics all in one place.
+
+View top content
+More searches More searches
+Developer jobs
+Software Engineer jobs
+Web Programmer jobs
+Engineer jobs
+Web Developer jobs
+Cobol Programmer jobs
+Scrum Master jobs
+Analyst jobs
+Software Tester jobs
+Experis jobs
+Sculptor jobs
+Functional Analyst jobs
+Architect jobs
+System Engineer jobs
+Business Analyst jobs
+Salesforce jobs
+Test Engineer jobs
+User Experience Designer jobs
+MioDottore jobs
+IBM jobs
+Oracle jobs
+Information Technology Technical Specialist jobs
+Atos jobs
+Junior Engineer jobs
+Project Manager jobs
+Automation Engineer jobs
+Amazon jobs
+Exprivia jobs
+Game Tester jobs
+Security Engineer jobs
+Business Intelligence Specialist jobs
+Computer Engineering jobs
+Information Technology Engineer jobs
+Reply jobs
+EY jobs
+Agile Coach jobs
+Technical Consultant jobs
+Information Technology Project Manager jobs
+TeamSystem jobs
+Junior Architect jobs
+UMANA SPA jobs
+Siemens jobs
+Google jobs
+Animation Specialist jobs
+Bending Spoons jobs
+Mathematician jobs
+Physicist jobs
+Food Technologist jobs
+Finance Consultant jobs
+Professor jobs
+Verisure jobs
+Vodafone jobs
+Teacher jobs
+Personnel Administration Specialist jobs
+American Express jobs
+Radiologist jobs
+Webmaster jobs
+idealista jobs
+Michael Page jobs
+Junior Project Manager jobs
+LinkedIn © 2026
+About
+Accessibility
+User Agreement
+Privacy Policy
+Cookie Policy
+Copyright Policy
+Brand Policy
+Guest Controls
+Community Guidelines
+العربية (Arabic)
+বাংলা (Bangla)
+Čeština (Czech)
+Dansk (Danish)
+Deutsch (German)
+Ελληνικά (Greek)
+English (English)
+Español (Spanish)
+فارسی (Persian)
+Suomi (Finnish)
+Français (French)
+हिंदी (Hindi)
+Magyar (Hungarian)
+Bahasa Indonesia (Indonesian)
+Italiano (Italian)
+עברית (Hebrew)
+日本語 (Japanese)
+한국어 (Korean)
+मराठी (Marathi)
+Bahasa Malaysia (Malay)
+Nederlands (Dutch)
+Norsk (Norwegian)
+ਪੰਜਾਬੀ (Punjabi)
+Polski (Polish)
+Português (Portuguese)
+Română (Romanian)
+Русский (Russian)
+Svenska (Swedish)
+తెలుగు (Telugu)
+ภาษาไทย (Thai)
+Tagalog (Tagalog)
+Türkçe (Turkish)
+Українська (Ukrainian)
+Tiếng Việt (Vietnamese)
+简体中文 (Chinese (Simplified))
+正體中文 (Chinese (Traditional))
+Language 
+
+LinkedIn
+
+Know when new jobs open up
+
+Never miss a job alert with the new LinkedIn app for Windows.
+
+Get the app 
+
+Agree & Join LinkedIn
+
+By clicking “Continue” to join or sign in, you agree to LinkedIn User Agreement, Privacy Policy, and Cookie Policy. LinkedIn is partially supported by advertising, which means we may use your data to show you sponsored content and ads that we believe may be of interest to you.
+
+LinkedIn
+
+LinkedIn is better on the app
+
+Don’t have the app? Get it in the Microsoft Store.
+
+Open the app 
+Sign in to see who you already know at MC Engineering
+Email or phone
+
+Password
+ Show
+
+Forgot password? Sign in
+ Sign in with Email
+
+or
+
+New to LinkedIn? Join now
+
+By clicking “Continue” to join or sign in, you agree to LinkedIn User Agreement, Privacy Policy, and Cookie Policy. LinkedIn is partially supported by advertising, which means we may use your data to show you sponsored content and ads that we believe may be of interest to you.

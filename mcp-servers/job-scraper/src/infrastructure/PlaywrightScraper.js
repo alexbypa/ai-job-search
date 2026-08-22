@@ -1,6 +1,8 @@
 import { chromium } from "playwright";
 import fs from "fs";
 import { ScrapingProvider } from "../interfaces/ScrapingProvider.js";
+import { Readability } from "@mozilla/readability";
+import { JSDOM } from "jsdom";
 
 export class PlaywrightScraper extends ScrapingProvider {
     /**
@@ -51,8 +53,45 @@ export class PlaywrightScraper extends ScrapingProvider {
             // Opzionale: aspettiamo 1 secondo per dare il tempo ad eventuali script JS dinamici di popolare la pagina
             await page.waitForTimeout(5000);
 
-            // Estraiamo il testo di tutta la pagina (body)
-            const textContent = await page.locator("body").innerText();
+            // Estraiamo l'intero HTML per processarlo con Readability
+            const htmlContent = await page.content();
+
+            // Usiamo JSDOM per creare un DOM virtuale interpretabile da Readability
+            const doc = new JSDOM(htmlContent, { url }).window.document;
+            const reader = new Readability(doc);
+            const article = reader.parse();
+
+            let textContent = "";
+            if (article && article.textContent && article.textContent.trim().length > 200) {
+                textContent = article.textContent.trim();
+                console.error(`[PlaywrightScraper] Testo estratto tramite algoritmo Mozilla Readability.`);
+            } else {
+                console.error(`[PlaywrightScraper] ATTENZIONE: Readability fallito. Ripiego sui selettori di fallback...`);
+                // Fallback di sicurezza: proviamo i selettori noti per i portali più complessi
+                const selectors = [
+                    ".show-more-less-html__markup", // LinkedIn (Guest)
+                    ".jobs-description__content",   // LinkedIn (Auth / alternative)
+                    "#jobDescriptionText",          // Indeed
+                    ".description__text",           // Altri portali
+                    "main",                         // HTML5 Semantic
+                    "body"                          // Fallback totale
+                ];
+
+                for (const selector of selectors) {
+                    try {
+                        const count = await page.locator(selector).count();
+                        if (count > 0) {
+                            textContent = await page.locator(selector).first().innerText({ timeout: 2000 });
+                            if (textContent.trim().length > 200) {
+                                console.error(`[PlaywrightScraper] Testo estratto tramite selettore: '${selector}'`);
+                                break;
+                            }
+                        }
+                    } catch (e) {
+                        // Passiamo al prossimo selettore
+                    }
+                }
+            }
 
             console.error(`[PlaywrightScraper] Scraping completato con successo. Caratteri estratti: ${textContent.length}`);
             return textContent;
