@@ -118,7 +118,7 @@ If two or more results in this run's pool (from the same company, or sharing the
 
 For each new candidate, delegate the entire fit evaluation to the external Node.js MCP server. **DO NOT fetch or read the job description yourself.** This saves context window and prevents token waste.
 
-1. **Invoke the MCP Tool**: Call the tool `mcp__job-scraper__analyze_job_url` from your registered `job-scraper` MCP server.
+1. **Invoke the MCP Tool**: Call the tool `analyze_job_url` (provided by the job-scraper MCP server).
    - Pass the job's URL to the `url` parameter.
    - Pass `minScore` come 3.
 2. **Evaluate the Output**:

@@ -41,10 +41,10 @@ bun run .agents/skills/iprogrammatori-search/cli/src/cli.ts search --query "<par
 ### 2. Dettaglio annuncio
 
 ```bash
-bun run .agents/skills/iprogrammatori-search/cli/src/cli.ts detail <id|url> [--format json|plain]
+bun run .agents/skills/iprogrammatori-search/cli/src/cli.ts detail <url> [--format json|plain]
 ```
 
-Accetta come parametro sia l'ID numerico dell'annuncio (es. `170803`) sia l'URL completo (es. `https://www.iprogrammatori.it/lavoro/ricerca_sviluppatore-dotnet-angular-smart-working_170803.aspx`). Restituisce la descrizione completa dell'annuncio.
+Accetta come parametro ESCLUSIVAMENTE l'URL completo dell'annuncio (es. `https://www.iprogrammatori.it/lavoro/ricerca_sviluppatore-dotnet-angular-smart-working_170803.aspx`). Non accetta ID numerici isolati. Restituisce la descrizione completa dell'annuncio.
 
 ## Esempi d'uso
 
@@ -55,8 +55,8 @@ bun run .agents/skills/iprogrammatori-search/cli/src/cli.ts search -q "csharp" -
 # Cerca sviluppatori Java con località "Remoto"
 bun run .agents/skills/iprogrammatori-search/cli/src/cli.ts search -q "java" -l "Remoto" --format table
 
-# Mostra i dettagli completi di un annuncio tramite il suo ID
-bun run .agents/skills/iprogrammatori-search/cli/src/cli.ts detail 170803 --format plain
+# Mostra i dettagli completi di un annuncio tramite il suo URL
+bun run .agents/skills/iprogrammatori-search/cli/src/cli.ts detail https://www.iprogrammatori.it/lavoro/ricerca_sviluppatore-dotnet-angular-smart-working_170803.aspx --format plain
 ```
 
 ## Formati di Output

@@ -127,9 +127,17 @@ app.post("/messages", async (req, res) => {
     console.error("Comando MCP ricevuto e processato via SSE!");
 });
 
-// 5. Avvia il server web
-app.listen(3000, () => {
+// 5. Avvia il server web (Express) gestendo gli errori per non far crashare lo stdio
+const expressServer = app.listen(3000, () => {
     console.error("MCP Server (SSE) in ascolto su http://localhost:3000");
+});
+
+expressServer.on('error', (err) => {
+    if (err.code === 'EADDRINUSE') {
+        console.error(`[ATTENZIONE] La porta 3000 è già in uso. Il server SSE Express non è stato avviato, ma il server Stdio funzionerà normalmente.`);
+    } else {
+        console.error(`[ERRORE] Express server error:`, err);
+    }
 });
 
 // Avvio tramite Stdio

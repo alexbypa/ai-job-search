@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "job-scraper": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "mcp-servers/job-scraper/src/mcp-server.js"
+      ]
+    }
+  }
+}
