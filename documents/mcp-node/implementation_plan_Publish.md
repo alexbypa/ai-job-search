@@ -60,3 +60,27 @@ Alla chiusura di questi 3 sotto-moduli:
 1. Lanceremo il server MCP migrato per validarne l'avvio.
 2. Eseguiremo `/scrape` per assicurarci che Claude visualizzi correttamente a schermo le keyword intercettate dal `.env`.
 3. Valuteremo i tempi di esecuzione e verificheremo che i token consumati rimangano minimali (circa 15k-20k).
+
+---
+
+## Modulo 7: Chiamata Diretta dell'MCP
+
+Questo modulo definisce le procedure per interagire direttamente con l'MCP server bypassando il workflow completo, utile per il debugging e il test isolato.
+
+### Modulo 7.1: Per chiamare direttamente come farebbe Claude
+
+**Obiettivo:** Testare il tool MCP simulando il comportamento di Claude tramite uno script Node.js indipendente.
+
+**Dettagli:**
+- Creare uno script client MCP standalone che si colleghi al server via `stdio`.
+- Formulare una richiesta `callTool` identica a quella che genererebbe Claude per il tool `scrape_and_match`.
+- Permette di isolare i bug del server da quelli legati ai prompt o alle limitazioni di token.
+
+### Modulo 7.2: Per chiamarlo direttamente da Claude
+
+**Obiettivo:** Fornire a Claude un'istruzione diretta per invocare il singolo tool su un URL specifico a scopo di test o verifica rapida.
+
+**Dettagli:**
+- Implementare uno slash command dedicato (es. `/test-mcp`) in `.claude/commands/` o un prompt specifico.
+- Istruire Claude a bypassare le fasi di ricerca e filtraggio e invocare immediatamente `scrape_and_match` su un URL fornito dall'utente.
+- Verificare come Claude interpreta e visualizza i nuovi risultati strutturati (es. `matchedDetails` introdotti nel Modulo 6.2).
