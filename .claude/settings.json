@@ -1,4 +1,11 @@
 {
+  "enabledPlugins": {
+    "dotnet-claude-kit@dotnet-claude-kit": false,
+    "telegram@claude-plugins-official": false,
+    "caveman@caveman": true,
+    "superpowers@claude-plugins-official": false,
+		"loggerhelper": false
+  },
   "permissions": {
     "allow": [
       "Skill(job-application-assistant)",

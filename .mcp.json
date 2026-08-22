@@ -1,8 +1,11 @@
 {
   "mcpServers": {
-    "loggerhelper": {
+    "job-scraper": {
       "type": "stdio",
-      "command": "loggerhelper-mcp"
+      "command": "node",
+      "args": [
+        "mcp-servers/job-scraper/src/mcp-server.js"
+      ]
     }
   }
 }

@@ -116,34 +116,17 @@ If two or more results in this run's pool (from the same company, or sharing the
 
 ### Step 3: Quick Fit Assessment
 
-For each new job, do a rapid fit check (NOT the full evaluation from `04-job-evaluation.md` - just a quick signal):
+For each new candidate, delegate the entire fit evaluation to the external Node.js MCP server. **DO NOT fetch or read the job description yourself.** This saves context window and prevents token waste.
 
-- **High match**: Role directly involves your core skills (C# / .NET development, distributed systems, etc.) OR explicitly contains "Categorie Protette" / "Legge 68/99" and matches C# / .NET.
-- **Medium match**: Role is adjacent to your experience (AI backend, other backend development)
-- **Low match**: Role requires significant skills you lack, or fails the core filter criteria below.
-
-**Mandatory Filters:**
-
-1. **C# / .NET Technical Filter (Agent Check)**: Verify that the job title or description mentions C# or .NET (case-insensitive, including `dotnet` or `dot-net`).
-2. **Location and Logistics Filter**: Verify the job location and work mode:
-   * If the location is Palermo, Italy: PASS (any mode: Remote, Hybrid, or On-site is allowed).
-   * If the location is NOT Palermo: PASS only if the role is Full Remote (or Smart Working/Da Remoto). If it requires hybrid or on-site work outside Palermo, FAIL.
-
-**Evaluation & Protected Categories Check:**
-
-1. **Invoke the MCP Tool (Protected Categories Check)**: Call the tool `GrepContentText` from your registered `logger-helper-mcp` server.
-   * Pass the full job description text to the `text` parameter.
-   * Pass the following list of keywords to the `keywords` parameter: `["68/99", "categorie protette", "collocamento mirato", "l. 68", "legge 68", "l.68/99"]`.
+1. **Invoke the MCP Tool**: Call the tool `mcp__job-scraper__analyze_job_url` from your registered `job-scraper` MCP server.
+   - Pass the job's URL to the `url` parameter.
+   - Pass `minScore` come 3.
 2. **Evaluate the Output**:
-   * If the job does not mention C#/.NET, OR if the location filter fails, classify the job as **Low match** and set its status to `"skipped"` (meaning it will be written to `seen_jobs.json` to prevent re-scraping but will NOT be shown in the final results table).
-   * Otherwise, if the mandatory filters pass:
-     * If the MCP tool finds any of the keywords (returns `IsEligible: true` or equivalent positive output), classify it as **High match** (auto-elevate to High).
-     * If the job is located outside Palermo, Italy and is designated as "Smart Working" (rather than explicitly "Full Remote"), classify it as **Medium match** (allowing the user to manually verify if office presence is required).
-     * Otherwise, assess the match level (High/Medium) based on technical specifics.
+   - The tool will return a JSON object containing `isMatch`, `score`, `fit`, `matchedDetails`, `executionTimeMs`, and `processedBytes`.
+   - If `isMatch` is false, classify the job as **Low match** and set its status to `"skipped"`.
+   - If `isMatch` is true, assign the candidate the exact match level returned by the tool's `fit` property (e.g. High, Medium, Low) without questioning it.
+   - Note any keywords found in `evidenceHighlights` as bullet points in Step 5.
 
-
-
-**Language override:** before assigning a match level, check the posting against `04-job-evaluation.md`'s Language Gate (a required language you haven't declared at all in your CLAUDE.md Languages table). A required language that's entirely undeclared overrides skill fit: mark it **Low** regardless of how well the skills align, and set its status to `"skipped"`. A **declared** language at a requirement that reads higher than your declared level is *not* an override — score fit normally, but add a red-flag bullet under that job's highlights (Step 5) quoting the posting's requirement next to your declared level, so the gap is visible without being auto-downgraded.
 
 ### Step 4: Deduplicate & Store
 
@@ -247,7 +230,7 @@ If Step 2.5 flagged a mass-posting pattern, note it in the Title cell (e.g. "Fro
 
 ### High-Match Highlights
 For each high-match job, add 2-3 bullet points:
-- Why it matches your profile
+- Stampa la lista esatta delle keyword trovate leggendo l'array `matchedDetails` (e il `score` totale) dall'output dell'MCP.
 - Key requirements to check
 - Any red flags (including mass-posting signals from Step 2.5)
 
@@ -256,6 +239,10 @@ For each high/medium-fit job from Step 4.5, add a short contacts block with the 
 LinkedIn search links:
 - Recruiters/TA search link, for the referral path
 - Role/team-peer search link, for the warm-intro / informational-outreach path
+
+### Riepilogo Tecnico
+A fine rapporto, calcola il totale dei byte processati e il tempo speso e scrivi questa riga:
+> ⚡ *Offloaded to Node.js: {totale} bytes analizzati in {totale} ms (Zero AI tokens consumed for HTML parsing!)*
 ```
 
 After presenting, ask:
